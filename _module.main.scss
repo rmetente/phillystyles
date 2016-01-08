@@ -1,0 +1,21 @@
+/*------------------------------------*\
+    $MAIN CONTENT AREA
+\*------------------------------------*/
+
+.main {
+  background-color: $white;
+}
+
+.content {
+  padding-top: rem($small-header-height);
+  @include mq($px800) {
+    padding-top: rem($wide-header-height);
+  }
+}
+
+/**
+ * Browser Update message
+ */
+.buorg {
+  z-index: 60000000; // Appear over header
+}

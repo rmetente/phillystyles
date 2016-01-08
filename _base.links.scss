@@ -1,0 +1,42 @@
+/*------------------------------------*\
+    $LINKS
+\*------------------------------------*/
+
+a {
+  text-decoration: none;
+  color: $blue;
+  path {
+    fill: $blue;
+  }
+  &:hover, &:focus {
+    text-decoration: none;
+    color: $slate;
+  }
+  p {
+    color: $gray-dark;
+  }
+}
+
+/**
+ * Inverted Links
+ */
+.invert-links {
+  .block__headline,
+  .li__title,
+  a {
+    color: $white;
+    path {
+      fill: $white;
+    }
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      color: darken($white, 15);
+      .block__headline,
+      .li__title {
+        text-decoration: none;
+        color: darken($white, 15);
+      }
+    }
+  }
+}

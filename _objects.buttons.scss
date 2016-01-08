@@ -1,0 +1,158 @@
+/*------------------------------------*\
+    $BUTTONS
+\*------------------------------------*/
+
+.btn,
+button,
+input[type="submit"] {
+  display: inline-block;
+  text-align: center;
+  font-size: rem(18);
+  padding: rem(11) rem(15) rem(10);
+  font-weight: 500;
+  line-height: 1;
+  font-family: $font;
+  background-color: $slate;
+  color: $white;
+  border: none;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    background-color: darken($slate, 10);
+    color: $white;
+  }
+}
+
+/**
+ * Button - Other (Not really sure about this yet. Need more elements to flesh out.)
+ */
+.btn--alt {
+  border-radius: 4px;
+  border: $border-style-thick;
+  padding: rem(14) $pad rem(12);
+  position: relative;
+  z-index: 5;
+  color: $blue;
+  font-weight: 500;
+  background-color: $white;
+  @include mq($px500) {
+    font-size: rem(20);
+  }
+  &:hover,
+  &:focus {
+    background-color: darken($white, 3);
+    color: $blue;
+  }
+  &.btn--with-icon {
+    margin-left: 0;
+    path {
+      fill: $blue;
+    }
+  }
+}
+
+/**
+ * Button Sizing
+ */
+.btn--xs {
+ padding: rem(6) rem(10) rem(4);
+ font-size: rem(14);
+}
+.btn--s {
+  padding: $pad-half $pad-half rem(8);
+  font-size: rem(16);
+}
+.btn--m {
+  padding: rem(14) rem(16) rem(12);
+  font-size: rem(16);
+}
+.btn--l {
+  padding: rem(17) $pad-and-half rem(15);
+}
+
+/**
+ * Buttons with icons
+ */
+.btn--with-icon {
+  .icon {
+    margin-bottom: 1px;
+  }
+  path {
+    fill: $white;
+  }
+}
+
+/**
+ * Button with border instead of fill.
+ */
+.btn--outline {
+  color: $slate;
+  border: 1px solid $slate;
+  background-color: $white;
+  font-weight: 500;
+  &:hover,
+  &:focus {
+    background-color: $slate;
+    color: $white;
+    path {
+      fill: $white;
+    }
+  }
+  path {
+    fill: $slate;
+  }
+  &.btn--xs {
+    padding: rem(5) rem(10) rem(3);
+  }
+}
+
+/**
+ * Continue Reading (used on smaller width articles)
+ */
+.btn__continue {
+  margin-bottom: $space-and-half;
+  .btn__text {
+    margin-bottom: rem(6);
+  }
+  .icon__clock {
+    padding: 1px;
+  }
+}
+
+/**
+ * Button wrapper with horiz rule behind it
+ */
+.btn__with-wings {
+  position: relative;
+  text-align: center;
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 50%;
+    height: 1px;
+    margin-top: -1px;
+    border-top: $border-style;
+  }
+}
+
+
+.btn--rounded {
+  border-radius: rem(7);
+  border: rem(1.5) solid $gray-med;
+  background-color: $white;
+  color: $black;
+  line-height: 1.2;
+  padding: rem(7) $pad-half rem(6);
+  text-transform: uppercase;
+  font-size: rem(12);
+  font-weight: bold;
+  display: inline-block;
+  &:hover {
+    background-color: $blue;
+    border-color: $blue;
+    color: $white;
+  }
+}
+

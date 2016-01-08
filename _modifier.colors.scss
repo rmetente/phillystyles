@@ -1,0 +1,135 @@
+/*------------------------------------*\
+    $COLOR MODIFIERS
+\*------------------------------------*/
+
+/**
+ * Text Colors
+ */
+.light {
+  color: $gray-med;
+}
+.gray {
+  color: $gray;
+}
+.gray--med {
+  color: $gray-med-2;
+}
+.gray--light {
+  color: $gray-light-2;
+}
+.gray--dark,
+.gray--dark a {
+  color: $gray-dark;
+}
+a.gray--light:hover {
+  color: darken($gray-light-2, 5);
+}
+.black,
+.black a {
+  color: $black;
+}
+.black--trans {
+  color: rgba($black, .7);;
+}
+.white {
+  color: $white;
+}
+.orange {
+  color: $orange;
+}
+.green--light {
+  color: $green-light;
+}
+.blue {
+  color: $blue;
+}
+.purple {
+  color: $purple;
+}
+.red {
+  color: $red;
+}
+.red--light {
+  color: lighten($red, 10);
+}
+.red--light-2{
+  color: $red-light;
+}
+.slate {
+  color: $slate;
+}
+.slate-light {
+  color: $slate-light;
+}
+
+
+/**
+ * Background Colors
+ */
+.no-bg {
+  background: none;
+}
+.bg--white {
+  background-color: $white;
+}
+.bg--black {
+  background-color: $black;
+}
+.bg--trans-black {
+  background-color: rgba($black, .5);
+}
+.bg--orange {
+  background-color: $orange;
+}
+.bg--blue {
+  background-color: $blue;
+}
+.bg--gray {
+  background-color: $gray;
+}
+.bg--light-gray {
+  background-color: $gray-light;
+}
+.bg--dark-gray {
+  background-color: $gray-dark;
+}
+.bg--daily-red {
+  background-color: $daily-news-red;
+}
+.bg--red {
+  background-color: $red;
+}
+.bg--slate {
+  background-color: $slate;
+}
+.bg--slate-light {
+  background-color: $slate-light;
+}
+.bg--slate-dark {
+  background-color: $slate-dark;
+}
+.bg--slate-light-2 {
+  background-color: $slate-light-2;
+}
+.bg--slate-dark-2 {
+  background-color: $slate-dark-2;
+}
+.bg--green {
+  background-color: $eagles-green;
+}
+
+/**
+ * States
+ */
+.valid {
+  color: $valid;
+}
+.error {
+  color: $error;
+}
+.warning {
+  color: $warning;
+}
+.information {
+  color: $information;
+}

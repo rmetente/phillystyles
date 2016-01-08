@@ -1,0 +1,199 @@
+/*------------------------------------*\
+    $ADS
+\*------------------------------------*/
+
+.ad {
+  img {
+    //max-width: none;
+  }
+  > a {
+    display: block;
+    line-height: 0;
+  }
+}
+
+.ad-class--320x50-728x90 {
+  @include mq($px350, max) {
+    //margin-left: -10px;
+    //margin-right: -10px;
+  }
+}
+
+.ad__leaderboard {
+  padding: $pad-half;
+  @include mq($px800) {
+    padding: $pad;
+    margin-bottom: $space;
+  }
+}
+.ad__300x250,
+.ad__300x600,
+.ad__300x50 {
+  width: rem(300);
+  @include center-block;
+}
+
+
+/*------------------------------------*\
+    $SPONSOR SECTION
+\*------------------------------------*/
+
+.spons-header {
+  margin-bottom: rem(4);
+  @include mq($px800) {
+    margin-bottom: $space-half;
+  }
+  @include mq($px1200) {
+    position: absolute;
+    left: 0;
+    top: rem(-18);
+    z-index: 10;
+  }
+}
+.spons-header__img {
+  max-width: rem(100);
+  display: inline-block;
+  vertical-align: bottom;
+  // @include mq($px1200) {
+  //   max-width: rem(140);
+  //   display: block;
+  // }
+}
+
+
+/*------------------------------------*\
+    $ADS IN ARTICLES
+\*------------------------------------*/
+
+.ad__title {
+  margin-bottom: rem(15);
+}
+.ad__thumb {
+  float: left;
+}
+
+
+/**
+ * Tracks - Usually for designated columns that feature sticky ads.
+ */
+.track {
+  display: none;
+  @include mq($px900) {
+    display: block;
+  }
+}
+.track--1050 {
+  @include mq($px1200) {
+    // Push through the content at 1200px to make way for the sticky ad.
+    height: 1050px;
+  }
+}
+.track--1600--900 {
+  @include mq($px900) {
+    // Push through the content at 900px to make way for the sticky ad.
+    height: 1600px;
+  }
+  @include mq($px1100) {
+    // Push through the content at 1100px to make way for the sticky ad.
+    height: 1250px;
+  }
+  @include mq($px1200) {
+    // Push through the content at 1200px to make way for the sticky ad.
+    height: 1050px;
+  }
+}
+
+
+/*------------------------------------*\
+    $OUTBRAIN 3RD PARTY
+\*------------------------------------*/
+
+.OUTBRAIN .AR_1 {
+  font-family: $font-secondary;
+  .obpd_header {
+    display: block;
+    margin-bottom: rem(5);
+  }
+  .ob-text-content {
+    font-size: rem(15);
+    font-weight: normal;
+  }
+  .ob_source {
+    font-size: rem(13);
+    color: $gray-med;
+  }
+  .odb_li {
+    margin-bottom: 0;
+  }
+  .ob_dual_left,
+  .ob_dual_right {
+    width: 47%;
+    float: right;
+    padding: 0;
+    @include mq($px500, max) {
+      width: 100%;
+      float: none;
+    }
+  }
+  .ob_dual_left {
+    float: left;
+    @include mq($px500, max) {
+      margin-bottom: $space-and-half;
+    }
+  }
+}
+
+/**
+ * Right rail Outbrain
+ */
+.ad__outbrain--right-rail {
+  @include mq($px900) {
+    padding-left: $pad;
+    border-left: $border-style;
+  }
+}
+
+
+/*------------------------------------*\
+    $WALLPAPER AD
+\*------------------------------------*/
+
+.ad__wallpaper {
+  @include mq(rem(1000)) {
+    max-width: rem(1800);
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url(http://cdn.hymnal.voxmedia.com/uploads/asset/file/8025/QX60_Eater_Reskin_RTD_Left.jpg), url(http://cdn.hymnal.voxmedia.com/uploads/asset/file/8026/QX60_Eater_Reskin_RTD_Right.jpg), url(http://cdn.hymnal.voxmedia.com/uploads/asset/file/8027/QX60_Eater_Reskin_RTD_Middle.jpg);
+    background-repeat: no-repeat, no-repeat, repeat-x;
+    background-position: top left, top right, top center;
+  }
+  @media (min-width: $px1200) and (max-width: $px1400) {
+    .block__feature-headline {
+      font-size: rem(25);
+    }
+    .block__feature .block__dek {
+      display: none;
+    }
+  }
+  .page--pad {
+    @include mq(rem(1340)) {
+      padding-left: $pad;
+      padding-right: $pad;
+    }
+  }
+  .main {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: rem(1000);
+    padding-top: $pad;
+    @include mq(rem(1400)) {
+      max-width: rem(1100);
+    }
+    @include mq(rem(1500)) {
+      max-width: rem(1200);
+    }
+    @include mq(rem(1600)) {
+      max-width: rem(1300);
+    }
+  }
+}

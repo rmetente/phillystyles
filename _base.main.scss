@@ -1,0 +1,15 @@
+/*------------------------------------*\
+    $SITE MAIN
+\*------------------------------------*/
+
+body {
+  background: $white;
+  font: 400 100%/1.3 $sans;
+  -webkit-text-size-adjust: 100%;
+  //-webkit-font-smoothing: antialiased;
+  color: $body-color;
+}
+// When fonts are loaded.
+.fonts-loaded body {
+  font-family: $font;
+}

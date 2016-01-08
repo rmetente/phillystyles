@@ -1,0 +1,78 @@
+/*------------------------------------*\
+    $BORDERS
+\*------------------------------------*/
+
+/**
+ * Borders/Dividers
+ */
+.border {
+  border: $border-style;
+}
+.border--top--solid {
+  border-top-style: solid;
+}
+.border--btm--solid {
+  border-bottom-style: solid;
+}
+.border--btm {
+  border-bottom: $border-style;
+}
+.border--btm--thick {
+  border-bottom: $border-style-thick;
+}
+.border--top--thick {
+  border-top: $border-style-thick;
+}
+.border--top {
+  border-top: $border-style;
+}
+.border--top--slate {
+  border-top-color: $slate;
+}
+.border--btm--slate {
+  border-top-color: $slate;
+}
+.border--top--red {
+  border-top-color: $red;
+}
+.border--btm--red {
+  border-bottom-color: $red;
+}
+.border--btm--black {
+  border-bottom-color: $black;
+}
+.border--top--s {
+  border-top-width: 1px;
+}
+.border--btm--s {
+  border-bottom-width: 1px;
+}
+.border--top--m {
+  border-top-width: 3px;
+}
+.border--btm--m {
+  border-bottom-width: 3px;
+}
+.border--trans-black {
+  border-color: rgba($black, .3);
+}
+.divider {
+  display: inline-block;
+  border-right: $border-style;
+  margin-left: rem(2);
+  margin-right: rem(5);
+  color: transparent;
+  height: rem(16);
+  width: 1px;
+  overflow: hidden;
+  text-indent: -10px;
+  vertical-align: middle;
+}
+.border--rounded-square {
+  border: $border-style;
+  border-radius: 3px;
+}
+
+.no-border {
+  border: none !important;
+}

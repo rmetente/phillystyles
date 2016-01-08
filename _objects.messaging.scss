@@ -1,0 +1,110 @@
+/*------------------------------------*\
+    $MESSAGING
+\*------------------------------------*/
+
+/*------------------------------------*\
+    $ANNOUNCEMENT BAR STYLES
+\*------------------------------------*/
+
+.announcement-bar {
+  padding: $pad-half 0;
+  border-bottom-style: solid;
+  border-bottom-width: 4px;
+  border-bottom-color: $red;
+  background-color: $slate-light;
+  min-height: rem($small-header-height + 2px);
+  @include mq($px800) {
+    height: rem($wide-header-height + 2px);
+  }
+  &.this-is-active {
+    display: none;
+  }
+}
+.no-flexbox .announcement-bar {
+  @include mq($px800) {
+    padding-top: rem(25);
+  }
+}
+
+.ab__content-wrap {
+  width: 100%;
+}
+.ab__content {
+  width: 100%;
+  padding-right: rem(40);
+}
+
+.ab__label-wrap {
+  .icon {
+    margin-right: rem(3);
+  }
+}
+.ab__text {
+  padding-top: rem(6);
+  padding-bottom: rem(6);
+}
+.ab__close {
+  padding: rem(5);
+  position: absolute;
+  right: 0;
+  top: 0;
+  @include mq($px600) {
+    top: 50%;
+    margin-top: rem(-13);
+  }
+}
+.ab__label {
+  margin-right: rem(6);
+}
+.ab__label--with-bg {
+  margin-bottom: rem(4);
+  color: $white;
+  padding: rem(3) rem(4);
+  background-color: $red;
+}
+.ab__cta {
+  margin: rem(2) 0;
+}
+
+
+/**
+ * Breaking News
+ */
+.ab__type--breaking {
+  background-color: $red;
+  border-bottom: none;
+  &:hover {
+    color: $white;
+  }
+}
+
+/**
+ * Normal Style
+ */
+.ab__type--normal {
+  border-bottom-color: $slate;
+  .ab__label {
+    color: $white;
+    padding: 3px 4px 1px 5px;
+    background-color: $slate;
+  }
+}
+
+/**
+ * LIVE Bar
+ */
+
+
+/**
+ * Custom w/ image
+ */
+.ab__type--custom {
+  padding: rem(12) 0 rem(6);
+  border-bottom: none;
+  .ab__graphic {
+    margin-right: rem(25);
+  }
+  @include mq($px600) {
+    padding: rem(14) 0 rem(8);
+  }
+}

@@ -1,0 +1,211 @@
+/*------------------------------------*\
+    $HEADER
+\*------------------------------------*/
+
+.header {
+  height: rem($small-header-height);
+  background-color: $white;
+  padding-top: rem(4);
+  position: fixed;
+  width: 100%;
+  z-index: 50000000; // Appear over ads
+  left: 0;
+  top: 0;
+  box-shadow: 0 0 3px rgba($black, .3);
+  &:not(.header--compact) {
+    @include mq($px800) {
+      height: rem($wide-header-height);
+    }
+  }
+}
+.header--inner {
+  padding-top: rem(6);
+  padding-bottom: rem(5);
+  @include mq($px800) {
+    position: static;
+    .header:not(.header--compact) & {
+      padding-top: $pad;
+      padding-bottom: $pad;
+    }
+  }
+}
+
+.logo-link {
+  width: rem(100);
+  height: rem(19);
+  display: inline-block;
+  vertical-align: middle;
+  margin: rem(8) rem(8) rem(3) 0;
+  .header:not(.header--compact) & {
+    @include mq($px800) {
+      width: rem(150);
+      height: rem(29);
+      margin-top: rem(5);
+      margin-right: rem(30);
+    }
+  }
+}
+
+/**
+ * Header Icons (Search & Avatar)
+ */
+.header__icons {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: $white;
+  padding-left: rem(8);
+  box-shadow: rem(1) 0 rem(50) rem(21) $white;
+  height: rem(46);
+  path {
+    fill: $black;
+  }
+  .header:not(.header--compact) & {
+    @include mq($px800) {
+      height: 100%;
+    }
+  }
+  // Menu is active
+  .menu-is-active & {
+    background-color: $black;
+    path {
+      fill: $white;
+    }
+  }
+}
+.header__icon {
+  padding: rem(11) rem(6);
+  top: 0;
+  height: rem(46);
+  position: relative;
+}
+
+/**
+ * Menu/Nav Toggling Action
+ */
+$menu-toggler-width: 25;
+.menu-toggler {
+  padding: rem(13);
+  margin-left: rem(4);
+  background-color: $gray-light;
+  @include transform(rotate(0deg));
+  cursor: pointer;
+  height: rem(46);
+  @include mq($px800) {
+    padding-left: $pad;
+    padding-right: $pad;
+    .header:not(.header--compact) & {
+      padding-top: rem(29);
+      padding-bottom: rem(27);
+      margin-left: rem(8);
+      height: rem(78);
+    }
+  }
+  span {
+    display: block;
+    position: absolute;
+    height: rem(3);
+    width: 100%;
+    background-color: $gray-dark;
+    border-radius: rem(4);
+    opacity: 1;
+    left: 0;
+    @include transform(rotate(0deg));
+    @include trans;
+  }
+  span:nth-child(1) {
+    top: 0;
+  }
+  span:nth-child(2),
+  span:nth-child(3) {
+    top: rem(6);
+  }
+  span:nth-child(4) {
+    top: rem(12);
+  }
+  .menu-is-active & {
+    background-color: $black;
+    span {
+      background-color: $white;
+    }
+    span:nth-child(1) {
+      top: rem(6);
+      width: 0%;
+      left: 50%;
+    }
+    span:nth-child(2) {
+      @include transform(rotate(45deg));
+    }
+    span:nth-child(3) {
+      @include transform(rotate(-45deg));
+    }
+    span:nth-child(4) {
+      top: rem(6);
+      width: 0%;
+      left: 50%;
+    }
+  }
+}
+.menu-toggler--wrap {
+  top: rem(-4);
+  @include mq($px800) {
+    top: rem(-3);
+  }
+}
+.menu-toggler__spans {
+  width: rem($menu-toggler-width);
+  height: 0;
+  top: rem(-8);
+}
+.menu-toggler__text {
+  display: none;
+  color: $black;
+  margin-left: rem(12);
+  @include mq($px800) {
+    display: inline-block;
+    vertical-align: middle;
+    width: rem(50);
+    margin-top: rem(8);
+  }
+  .off {
+    display: none;
+  }
+  // Menu is active
+  .content.menu-is-active & {
+    color: $white;
+    .off {
+      display: inline-block;
+    }
+    .on {
+      display: none;
+    }
+  }
+}
+
+
+/*------------------------------------*\
+    $PROGRESS INDICATOR
+\*------------------------------------*/
+
+.progress {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: rem(4);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  background-color: $red;
+  color: $red;
+  z-index: 1000;
+}
+.progress::-webkit-progress-bar {
+  background-color: $red;
+}
+.progress::-webkit-progress-value {
+  background-color: $black;
+}
+.progress::-moz-progress-bar {
+  background-color: $black;
+}

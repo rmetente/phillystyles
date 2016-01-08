@@ -1,0 +1,105 @@
+/*------------------------------------*\
+    $SPORTS STAT WIDGET
+\*------------------------------------*/
+
+// http://philly.stats.com/multisport/widgets.asp?sport=mlb&type=team&lang=en&lg=mls&team=22
+
+/* sorry, but the !importants have to be there to override the native stats styles */
+$tdPadding: rem(6) rem(8);
+
+table.shsTable,
+table.shsTable table,
+table.shsTable td,
+td#shsTeamScoreboardsEntry {
+  border: 0;
+}
+
+div#shsBody,
+div#shsMiniBody {
+  padding: 0;
+  font-family: $font;
+
+  .shsNamD a,
+  .teamName {
+    font-weight: bold;
+  }
+
+  a {
+    color: $body-color;
+  }
+
+  table .shsTableSubttlRow td,
+  table .shsTableTtlRow td,
+  table .shsColTtlRow td {
+    font-style: normal;
+    background: $gray-light !important;
+    font-family: inherit;
+    color: $body-color;
+  }
+
+  table .shsTableTtlRow,
+  table .shsColTtlRow,
+  table .shsRow0Row,
+  table .shsRow1Row,
+  table .shsRow2Row,
+  table .shsRow3Row,
+  table .shsRow4Row,
+  table .shsRow5Row,
+  table .shsRow6Row,
+  table .shsRow7Row,
+  table .shsRow8Row,
+  table .shsRow9Row {
+    border-top: rem(1) solid #c8c9cb;
+    border-bottom: rem(1) solid #c8c9cb;
+
+    td {
+      padding: $tdPadding;
+    }
+  }
+
+  table td {
+    font-size: rem(13);
+
+    @include mq($px800) {
+      font-size: rem(16);
+
+      span {
+        font-size: rem(16);
+      }
+    }
+  }
+
+  td.shsLiveNav,
+  div.shsGamePitchers,
+  div.shsLiveNav,
+  td.shsTotD {
+    text-align: left !important;
+    padding: $tdPadding;
+    padding-left: rem(3);
+    color: $gray-med;
+
+    a {
+      color: $blue;
+      margin: 0 rem(5);
+      font-weight: bold;
+    }
+  }
+}
+
+div#shsBody div#shsTeamScoreboards {
+  div.shsGamePitchers,
+  div.shsLiveNav {
+    text-align: center !important;
+  }
+}
+
+table.shsLinescore tr.shsGamePitchers td,
+table.shsLinescore tr.shsGameHomeRuns td {
+  padding: $tdPadding;
+}
+
+td#shsTeamScoreboardsEntry {
+  padding: 0;
+}
+
+

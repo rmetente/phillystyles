@@ -1,0 +1,56 @@
+/*------------------------------------*\
+    $TEXT ELEMENTS
+\*------------------------------------*/
+
+/**
+ * Text-Related Elements
+ */
+p {
+  margin-bottom: $space;
+  @include text-styles;
+}
+
+/**
+ * Bold
+ */
+strong, b {
+  font-weight: 600;
+}
+
+/**
+ * Blockquote
+ */
+blockquote {
+  padding: $pad;
+  background-color: $gray-light;
+  text-align: left;
+  clear: both;
+  p {
+    color: $gray-dark-2;
+    font-style: italic;
+    margin-bottom: 0;
+  }
+  @include mq($px900) {
+    padding: $pad-and-half;
+  }
+}
+
+/**
+ * Horizontal Rule
+ */
+hr {
+  height: 1px;
+  border: none;
+  background-color: $gray-light-2;
+  margin-top: $space-double;
+  margin-bottom: $space-double;
+  @include center-block;
+}
+
+/**
+ * Abbreviation
+ */
+abbr {
+  border-bottom: 1px dotted $gray;
+  cursor: help;
+}

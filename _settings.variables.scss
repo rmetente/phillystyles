@@ -1,0 +1,231 @@
+@import "tools.mixins";
+
+/*------------------------------------*\
+    $VARIABLES
+\*------------------------------------*/
+
+/**
+ * Grid & Baseline Setup
+ */
+$column: 92px;
+$gutter: 10px;
+$grid-columns: 12;
+$fontpx: 16; // Font size (px) baseline applied to <body> and converted to %.
+$defaultpx: 16; // Browser default px used for media queries
+$rembase: 16; // 16px = 1.00rem
+$max-width-px: 1295;
+$max-width: rem($max-width-px) !default;
+$inner-max-width: (910/$fontpx) + 0em;
+$inner-max-small: (740/$defaultpx) + 0em;
+
+/**
+ * Colors
+ */
+$gray: #666;
+$gray-light: #F1F1F2;
+$gray-light-2: #D1D2D4;
+$gray-very-light: #fafafa;
+$gray-med: #a7a7a7;
+$gray-med-2: #666;
+$gray-dark: #222222;
+$gray-dark-2: #252525;
+$white: #fff;
+$black: #000;
+$dim: rgba(0,0,0,0.5);
+$error: #f00;
+$valid: #089e00;
+$warning: #fff664;
+$information: #000db5;
+$feaux-black: #393939;
+$overlay: rgba($black, .9);
+$overlay-light: rgba($black, .76);
+
+/**
+ * Style Colors
+ */
+$body-color: $gray-dark;
+$blue: #0061A2;
+$blue-light: lighten($blue, 60);
+$blue-light-2: lighten(#006699, 8);
+$pink: darken(#FFE8E8, 3);
+$red: #B63321;
+$red-2: #CC0000;
+$red-light: #FF5846;
+$off-white: #e6e7e2;
+$orange: #E5774D;
+$emeril-green: #009370;
+$green-light: #64FF9E;
+$yellow: desaturate(#F9DC08, 15);
+$purple: #ab00ba;
+$slate: #5F7495;
+$slate-light: #F2F5F7;
+$slate-light-2: #3F4752;
+$slate-dark: #171B21;
+$slate-dark-2: #242C37;
+
+$daily-news-red: #CF2026;
+$eagles-green: #014B52;
+
+/**
+ * Social Colors
+ */
+$twitter-blue: #13C4F8;
+$facebook-blue: #4A66A3;
+$instagram-blue: #48769F;
+$instagram-brown: #5f4132;
+$pinterest-red: #FF423E;
+$youtube-red: #b31217;
+$google-red: $youtube-red;
+
+/**
+ * Typography
+ */
+$font: "Gotham Narrow SSm A", "Gotham Narrow SSm B", "Arial", sans-serif;
+$font-secondary: "Sentinel SSm A", "Sentinel SSm B", Times, "Times New Roman", serif;
+$sans: "Helvetica", "Arial", sans-serif;
+$serif: Georgia, Times, "Times New Roman", serif;
+$monospace: Menlo, Monaco, "Courier New", "Courier", monospace;
+
+/**
+ * Amimation
+ */
+$cubic-bezier: cubic-bezier(0.860, 0.000, 0.070, 1.000);
+
+$font-size-small: 0.75em;
+$font-size-small-2: 0.875em;
+$font-size-med: 1em;
+$font-size-med-2: 1.0625em;
+$font-size-large: 1.4375em;
+
+/**
+ * Default Spacing/Padding
+ */
+$space: rem(20);
+$space-and-half: $space*1.5;
+$space-double: $space*2;
+$space-quad: $space*4;
+$space-half: $space/2;
+$pad: rem(20);
+$pad-and-half: $pad*1.5;
+$pad-double: $pad*2;
+$pad-half: $pad/2;
+$pad-quarter: $pad/4;
+
+/**
+ * Border Styles
+ */
+$border-med: 6px;
+$border-thick: 8px;
+$border-opacity: 1px solid rgba($white, .2);
+$border-style: 1px solid $gray-light-2;
+$border-style-thick: 3px solid $gray-light-2;
+$border-style-light: 1px solid $gray-light;
+$border-style-white: 1px solid $white;
+$border-style-dark: 1px solid $black;
+
+/**
+ * Breakpoints (legacy)
+ */
+$bp-small: 24em; // 384px
+$bp-small-2: 29.75em; // 476px
+$bp-small-3: 39.8em; // 636px
+$bp-med: 46.8em; // 748px
+$bp-med-2: 48em; // 768px
+$bp-large: 50em; // 800px
+$bp-large-2: 66em; // 1056px
+$bp-xl: 73em; // 1168px
+$bp-xxl: 89em; // 1424px
+$bp-xxxl: 93em; // 1488px
+
+/**
+ * Breakpoints
+ */
+$px200: (200/$defaultpx) + 0em;
+$px250: (250/$defaultpx) + 0em;
+$px300: (300/$defaultpx) + 0em;
+$px320: (320/$defaultpx) + 0em;
+$px325: (325/$defaultpx) + 0em;
+$px330: (330/$defaultpx) + 0em;
+$px350: (350/$defaultpx) + 0em;
+$px370: (370/$defaultpx) + 0em;
+$px400: (400/$defaultpx) + 0em;
+$px450: (450/$defaultpx) + 0em;
+$px480: (480/$defaultpx) + 0em;
+$px500: (500/$defaultpx) + 0em;
+$px530: (530/$defaultpx) + 0em;
+$px550: (550/$defaultpx) + 0em;
+$px560: (560/$defaultpx) + 0em;
+$px599: (599/$defaultpx) + 0em;
+$px600: (600/$defaultpx) + 0em;
+$px650: (650/$defaultpx) + 0em;
+$px700: (700/$defaultpx) + 0em;
+$px720: (720/$defaultpx) + 0em;
+$px759: (759/$defaultpx) + 0em;
+$px750: (750/$defaultpx) + 0em;
+$px760: (760/$defaultpx) + 0em;
+$px785: (785/$defaultpx) + 0em;
+$px800: (800/$defaultpx) + 0em;
+$px801: (801/$defaultpx) + 0em;
+$px850: (850/$defaultpx) + 0em;
+$break-into-columns: (850/$defaultpx) + 0em;
+$px900: (900/$defaultpx) + 0em;
+$px950: (950/$defaultpx) + 0em;
+$px980: (980/$defaultpx) + 0em;
+$px999: (999/$defaultpx) + 0em;
+$px1000: (1000/$defaultpx) + 0em;
+$px1050: (1050/$defaultpx) + 0em;
+$px1100: (1100/$defaultpx) + 0em;
+$px1150: (1150/$defaultpx) + 0em;
+$px1200: (1200/$defaultpx) + 0em;
+$px1250: (1250/$defaultpx) + 0em;
+$px1300: (1300/$defaultpx) + 0em;
+$px1340: (1340/$defaultpx) + 0em;
+$px1390: (1390/$defaultpx) + 0em;
+$px1400: (1400/$defaultpx) + 0em;
+$px1450: (1450/$defaultpx) + 0em;
+$px1500: (1500/$defaultpx) + 0em;
+$px1800: (1800/$defaultpx) + 0em;
+$px-max: $max-width;
+$px-max-plus: (1300/$defaultpx) + 0em;
+
+
+/**
+ * Common Breakpoints
+ */
+$larger-break: $px1200;
+$large-break: $px1000; // Tablet Landscape, Desktop
+$medium-break: $px900; // Tablet Portrait
+$small-break: $px750;  // Mobile Landscape
+$micro-break: $px450;  // Mobile Portrait
+
+$nav-breakout: $px500;
+$nav-breakout-med: $px800;
+$nav-breakout-large: $px1050;
+
+$sidebar-width: 330;
+$col-small-width: 250;
+$col-small-width-first: $col-small-width - 150; // occurs at 800px
+$col-small-width-second: $col-small-width - 60; // occurs at 1200px
+$article-max-width: 728;
+$gutter-width: 15;
+
+// Not used
+$article-left-col-width: 200;
+$article-left-space: 110;
+
+/**
+ * Icon Sizing
+ */
+$icon-xsmall: rem(13);
+$icon-small: rem(24);
+$icon-medium: rem(40);
+$icon-large: rem(50);
+$icon-big: rem(65);
+
+/**
+ * Element Specific Dimensions
+ */
+$small-header-height: 50;
+$wide-header-height: 82;
+$split-col1: (354/$defaultpx) + 0em; // Right padding for split layout with fixed sidebar
+$split-col2: (300/$defaultpx) + 0em; // Fixed width of right column

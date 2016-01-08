@@ -1,0 +1,65 @@
+/*------------------------------------*\
+    $ANIMATIONS & TRANSITIONS
+\*------------------------------------*/
+
+/**
+ * Pulse background color -- red
+ */
+.anim__bg-pulse--red {
+  @include animation(bg-pulse 1.5s ease infinite);
+}
+.no-flexbox .anim__bg-pulse--red {
+  background-color: $red;
+}
+@-webkit-keyframes bg-pulse {
+  0% {
+    @include transform(scale(1));
+    background-color: lighten($red, 25);
+  }
+  50% {
+    transform: scale(1.05);
+    background-color: darken($red, 5);
+  }
+  100% {
+    @include transform(scale(1));
+    background-color: lighten($red, 25);
+  }
+}
+@-moz-keyframes bg-pulse {
+  0% {
+    @include transform(scale(1));
+    background-color: lighten($red, 25);
+  }
+  50% {
+    transform: scale(1.05);
+    background-color: darken($red, 5);
+  }
+  100% {
+    @include transform(scale(1));
+    background-color: lighten($red, 25);
+  }
+}
+@keyframes bg-pulse {
+  0% {
+    @include transform(scale(1));
+    background-color: lighten($red, 25);
+  }
+  50% {
+    transform: scale(1.05);
+    background-color: darken($red, 5);
+  }
+  100% {
+    @include transform(scale(1));
+    background-color: lighten($red, 25);
+  }
+}
+
+/**
+ * Transitions
+ */
+.trans {
+  @include trans;
+}
+.trans--fast {
+  @include transition(all .1s ease-in-out);
+}

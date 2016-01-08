@@ -1,0 +1,923 @@
+/*------------------------------------*\
+    $BLOCKS
+\*------------------------------------*/
+
+// Block
+.block {
+  font-family: $sans;
+  .fonts-loaded & {
+    font-family: $font;
+  }
+  img {
+    display: inline-block;
+  }
+}
+.block__inner {
+  &:hover {
+    .block__headline a {
+      color: $slate;
+    }
+  }
+}
+.block__title {
+  margin-bottom: rem(12);
+}
+.block__title-alt {
+  font-family: $serif;
+  .fonts-loaded & {
+    font-family: $font-secondary;
+  }
+}
+.block__headline {
+  font-size: rem(16);
+}
+.block__link {
+  display: block;
+  width: 100%;
+}
+.block__desc {
+  font-family: $serif;
+  .fonts-loaded & {
+    font-family: $font-secondary;
+  }
+  font-size: rem(14);
+  margin-bottom: 0;
+  padding-top: rem(5);
+}
+
+
+/*------------------------------------*\
+    $BLOCK META
+\*------------------------------------*/
+
+.block__meta {
+  .badge {
+    margin-right: rem(6);
+  }
+  .icon {
+    margin-right: rem(2);
+  }
+  .block__meta-text {
+    padding-top: rem(4);
+  }
+  .byline {
+    //display: block;
+    margin-bottom: rem(5);
+  }
+}
+
+
+/*------------------------------------*\
+    $BLOCK THUMBNAIL WITH HEADLINE
+\*------------------------------------*/
+
+.block__img {
+  width: 100%;
+  margin-bottom: rem(8);
+  > a {
+    display: block;
+    line-height: 0;
+  }
+}
+
+/**
+ * Block Thumb - Large Format
+ */
+.block__thumb--lf {
+  .block__headline {
+    line-height: 1.2;
+    font-size: rem(22);
+    font-weight: 800;
+    margin-bottom: $space-half;
+    a {
+      color: $gray-dark;
+    }
+    @include mq($px600) {
+      margin-bottom: $space;
+    }
+  }
+}
+
+/**
+ * Block Thumbs that are side by side: [text] | [image]
+ */
+.block__thumb--horiz {
+  font-size: rem(16);
+  overflow: hidden;
+  min-height: rem(80);
+  @include mq($px600) {
+    margin-bottom: $space;
+  }
+  .block__img {
+    text-align: right;
+    float: right;
+    width: 45%;
+    margin-bottom: 0;
+    padding-left: $pad-and-half;
+  }
+  .block__text {
+    float: left;
+    width: 55%;
+  }
+}
+
+/**
+ * Bump up the size if there's more room.
+ */
+.size-up--400 {
+  @include mq($px400) {
+    .block__headline,
+    .li__title {
+      font-size: rem(22);
+    }
+    .block__desc {
+      padding-top: $pad-half;
+      font-size: rem(15);
+    }
+  }
+  // Bump the font size up for blocks with no image.
+  .no-img {
+    @include mq($px400) {
+      .block__headline,
+      .li__title {
+        line-height: 1.25;
+        font-size: rem(26);
+      }
+    }
+  }
+}
+/**
+ * Bump up the size if there's more room between 500 - 800, then again
+ * from 900 - 1100.
+ */
+.size-up--500-800__900-1100 {
+  @media (min-width: $px500) and (max-width: $px800), (min-width: $px900) and (max-width: $px1100) {
+    .block__headline,
+    .li__title {
+      font-size: rem(22);
+    }
+    .block__desc {
+      padding-top: $pad-half;
+      font-size: rem(15);
+    }
+  }
+  // Bump the font size up for blocks with no image.
+  .no-img {
+    @media (min-width: $px500) and (max-width: $px800), (min-width: $px900) and (max-width: $px1100) {
+      .block__headline,
+      .li__title {
+        line-height: 1.25;
+        font-size: rem(26);
+      }
+    }
+  }
+}
+.size-up--1200 {
+  @include mq($px1200) {
+    .block__headline,
+    .li__title {
+      font-size: rem(22);
+    }
+    .block__desc {
+      padding-top: $pad-half;
+      font-size: rem(15);
+    }
+  }
+  // Bump the font size up for blocks with no image.
+  .no-img {
+    @include mq($px1200) {
+      .block__headline,
+      .li__title {
+        line-height: 1.25;
+        font-size: rem(26);
+      }
+    }
+  }
+}
+
+
+/*------------------------------------*\
+    $BLOCK LIST
+\*------------------------------------*/
+
+.block__list-item {
+  font-size: rem(16);
+  overflow: hidden;
+  //min-height: rem(80);
+  @include mq($px600) {
+    margin-bottom: $space;
+  }
+  .block__img {
+    text-align: right;
+    float: right;
+    width: 50%;
+    padding-left: $pad-and-half;
+  }
+}
+.li__title {
+  font-size: rem(16);
+  margin-bottom: 0;
+  display: inline;
+  color: $gray-dark;
+}
+.block__list-alt {
+  .li__title {
+    font-weight: 800;
+    @media (min-width: $px500) and (max-width: $px700) {
+      font-size: rem(20);
+    }
+  }
+}
+.block__link:hover {
+  .li__title {
+    color: $slate;
+  }
+  .invert-links .li__title {
+    color: darken($white, 15);
+  }
+}
+
+/**
+ * Two Column Block List
+ */
+.block__list-split {
+  .block__list-items {
+    @include mq($px600) {
+      @include display(flex);
+      @include flex-wrap(wrap);
+      @include justify-content(center);
+      @include align-items(center);
+    }
+  }
+  .block__list-item {
+    .block__img {
+      width: 40%;
+      padding-left: $pad-half;
+    }
+    @include mq($px600) {
+      @include flex-basis(50%);
+      @include align-self(flex-start);
+      &:nth-child(odd) {
+        padding-right: $pad-and-half;
+        border-right: $border-style;
+      }
+      &:nth-child(even) {
+        padding-left: $pad-and-half;
+      }
+      &:first-child:last-child {
+        width: 100%;
+        @include flex-basis(100%);
+        padding: 0;
+      }
+      &:last-child:nth-child(odd) {
+        border-right: none;
+        padding: 0;
+      }
+    }
+    .block__tags-list-item {
+      padding: 0;
+    }
+  }
+}
+.no-flexbox {
+  .block__list-split {
+    .block__list-item {
+      @include mq($px600) {
+        float: left;
+        width: calc(50% - 1px);
+        &:nth-child(even) {
+          float: right;
+        }
+      }
+    }
+    .block__tags-list-item:nth-child(odd) {
+      float: none;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+    }
+  }
+}
+
+/**
+ * Block List using Flexbox
+ */
+.block__list-flex {
+  overflow: hidden;
+  .li__title {
+    font-weight: 800;
+  }
+}
+.block__list-items-flex {
+  @media (min-width: $px600) {
+    margin-left: -$space;
+    margin-right: -$space;
+  }
+}
+.block__list-item-flex {
+  width: 100%;
+  @include align-content(flex-start);
+  border-bottom: $border-style-light;
+  padding-bottom: $pad-half;
+  @media (min-width: $px600) {
+    width: 50%;
+    padding-left: $pad;
+    padding-right: $pad;
+    border-bottom: none;
+    float: left;
+    &:nth-child(even) {
+      clear: left;
+    }
+    &.with-dividers {
+      border-right: $border-style;
+    }
+  }
+  .g-flex--3 & {
+    @media (min-width: $px800) {
+      width: 33.33333%;
+      &:nth-child(even) {
+        clear: none;
+      }
+      &:nth-child(3n+4) {
+        clear: left;
+      }
+    }
+  }
+  [class^="shift-left"] & {
+    @media (min-width: $px900) and (max-width: $px1100) {
+      width: 50%;
+    }
+  }
+  .g-flex--4 &,
+  .g-flex--4:not(.g-stop) & {
+    @media (min-width: $px1100) {
+      width: 25%;
+      &:nth-child(3n+4),
+      &:nth-child(even) {
+        clear: none;
+      }
+      &:nth-child(4n+5) {
+        clear: left;
+      }
+    }
+  }
+}
+
+/**
+ * Featured Block in Block List
+ */
+.block__list-items-feature {
+  @media (min-width: $px800) and (max-width: $px900), (min-width: $px1100) {
+    padding-left: calc(33.3333% + 15px);
+  }
+}
+.block__list-item-in-feature {
+  @media (min-width: $px800) and (max-width: $px900), (min-width: $px1100) {
+    width: 50%;
+  }
+}
+.block__list-items-feature .block__list-item-featured {
+  @media (min-width: $px600) {
+    margin-bottom: $space-and-half;
+    width: 100%;
+  }
+  @media (min-width: $px800) and (max-width: $px900), (min-width: $px1100) {
+    position: absolute;
+    width: 33.3333%;
+    margin: 0;
+    left: 0;
+    display: block;
+    height: calc(100% - 20px);
+    padding: 0 rem(15) 0 0;
+    border-right: $border-style;
+  }
+  .block__img {
+    float: left;
+    width: 40%;
+    padding-left: 0;
+    @media (min-width: $px800) and (max-width: $px900), (min-width: $px1100) {
+      display: block;
+      margin-bottom: $space-half;
+      width: 100%;
+      max-width: none;
+      padding: 0;
+      float: none;
+      text-align: left;
+    }
+  }
+  .block__text {
+    float: left;
+    width: 60%;
+    padding-left: $pad;
+    @media (min-width: $px800) and (max-width: $px900), (min-width: $px1100) {
+      width: 100%;
+      padding: 0;
+      display: block;
+      float: none;
+    }
+  }
+  .li__title {
+    display: inline-block;
+    margin-bottom: rem(5);
+    font-size: rem(18);
+    @media (min-width: $px400) {
+      font-size: rem(21);
+    }
+    @media (min-width: $px500) {
+      font-size: rem(26);
+    }
+  }
+  div[class^="shift-left"] & {
+    @media (min-width: $px900) and (max-width: $px1100) {
+      width: 100%;
+    }
+  }
+  .g-flex--4 & {
+    @media (min-width: $px1100) {
+      width: 50%;
+    }
+  }
+}
+
+/**
+ * Block list within a block list
+ */
+.block__list-inner-item {
+  margin-bottom: rem(15);
+}
+
+
+/*------------------------------------*\
+    $HERO BLOCK
+\*------------------------------------*/
+
+.block__hero {
+  padding: $pad;
+  margin-bottom: $space-and-half;
+  .block__headline {
+    font-size: rem(22);
+    display: block;
+    margin-bottom: $space-half;
+  }
+  img {
+    width: 100%;
+  }
+}
+
+/**
+ * Stretch block beyond the site gutters.
+ */
+.bleed-block {
+  margin-left: rem(-$gutter-width);
+  margin-right: rem(-$gutter-width);
+  @include mq($px330, max) {
+    margin-left: rem(-10);
+    margin-right: rem(-10);
+  }
+  @include mq($px1000) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+
+/*------------------------------------*\
+    $FEATURE BLOCK
+\*------------------------------------*/
+// usually reserved for home page
+
+.block__feature {
+  .block__text {
+    @media (min-width: $px800) and (max-width: $px900), (min-width: $px1000) {
+      float: left;
+      width: 35%;
+      padding-right: rem(24);
+    }
+  }
+  .block__dek {
+    @media (min-width: $px800) and (max-width: $px1200) {
+      display: none;
+    }
+  }
+  .block__img {
+    img {
+      width: 100%;
+    }
+    @media (min-width: $px800) and (max-width: $px900), (min-width: $px1000) {
+      margin-bottom: 0;
+      float: right;
+      width: 65%;
+    }
+  }
+}
+.block__feature-headline {
+  font-size: rem(22);
+  padding-top: rem(5);
+  margin-bottom: rem(16);
+  @media (min-width: $px600) {
+    font-size: rem(25);
+  }
+  @media (min-width: $px800) and (max-width: $px900), (min-width: $px1200) {
+    font-size: rem(30);
+  }
+}
+
+
+/*------------------------------------*\
+    $COLUMNIST BLOCK
+\*------------------------------------*/
+
+.block__columnist {
+  .block__list-item {
+    // These begin in a collapsed state with the last four items hidden.
+    // Regardless of the toggled state, reveal all at 800px.
+    @media (min-width: $px800) {
+      padding-left: rem(16);
+      padding-right: rem(16);
+      @include display(flex);
+      @include flex-wrap(wrap);
+      @include align-items(stretch);
+    }
+  }
+  .block__author-img {
+    @media (min-width: $px1100) and (max-width: $px1200) {
+      display: block;
+    }
+  }
+  .block__author-detail {
+    @media (min-width: $px1100) and (max-width: $px1200) {
+      display: block;
+      width: 100%;
+      padding: 0;
+    }
+  }
+}
+.block__author {
+  width: 100%;
+  @include mq($px600) {
+    padding: $pad;
+    background-color: $white;
+  }
+  .block__link {
+    padding-left: rem(94);
+    @include mq($px600) {
+      padding-left: 0;
+      clear: left;
+    }
+  }
+}
+.block__author--inner {
+  width: 100%;
+  margin-bottom: rem(6);
+}
+.block__author-img {
+  width: rem(90);
+  height: rem(90);
+  min-width: rem(90);
+  float: left;
+}
+.block__author-detail {
+  padding-left: rem(94);
+}
+.block__author-name,
+.block__author-position,
+.block__author-twitter {
+  margin-bottom: rem(4);
+  display: inline-block;
+  @include mq($px600, max) {
+    display: none;
+  }
+}
+
+
+/*------------------------------------*\
+    $BLOCK ARRANGEMENTS
+\*------------------------------------*/
+
+/**
+ * Flip image left and text right for block & thumb pairings with a default
+ * text left / image right layout.
+ */
+.block__flip-img-text {
+  .block__link {
+    display: table;
+  }
+  .block__img {
+    float: none;
+    width: auto;
+    margin-bottom: 0;
+    padding-left: 0;
+    display: table-cell;
+    width: 30%;
+    max-width: rem(220);
+    text-align: left;
+    line-height: 0;
+    .block__link {
+      // If .block__link doesn't wrap both the .block__img and .block__text,
+      // just make it display: block.
+      display: block;
+    }
+  }
+  .block__text {
+    padding-left: $pad;
+    float: none;
+    width: 70%;
+    display: table-cell;
+    vertical-align: top;
+  }
+}
+.no-flexbox .block__flip-img-text {
+  .block__link {
+    display: block;
+  }
+  .block__img {
+    display: block;
+    float: left;
+  }
+  .block__text {
+    display: block;
+    float: left;
+  }
+}
+
+/**
+ * At 500px - 700px, and again after 850px, shift layout to image left and copy right
+ * - (article recirc mostly)
+ */
+.arrange-500-700_850:not(.block--no-img) {
+  @media (min-width: $px500) and (max-width: $px700), (min-width: $px850) {
+    .block__img {
+      float: left;
+      width: 35%;
+      margin-bottom: 0;
+      padding-left: 0;
+    }
+    .block__text {
+      padding-top: $pad-half;
+      padding-left: $pad;
+      float: left;
+      width: 65%;
+    }
+  }
+}
+
+/**
+ * Stack Block Elements
+ */
+.block__stacked {
+  .block__img {
+    display: block;
+    width: 100%;
+    float: none;
+    margin-bottom: 0;
+    padding-left: 0;
+    text-align: left;
+    line-height: 0;
+  }
+  .block__text {
+    padding: $pad-half 0 0;
+    float: none;
+    width: 100%;
+    display: block;
+  }
+}
+
+/**
+ * At 800px - 900px, then again at 1100px arrange a stacked block to side
+ * by side: [image] | [text]
+ * - (section front Video and Photo thumbs mostly)
+ */
+.arrange-800-900__1100--horiz {
+  @media (min-width: $px800) and (max-width: $px900), (min-width: $px1100) {
+    .block__img {
+      float: left;
+      width: 35%;
+      margin-bottom: 0;
+    }
+    .block__text {
+      padding-top: 0;
+      padding-left: $pad-half;
+      float: right;
+      width: 65%;
+    }
+  }
+}
+
+/**
+ * At 600px - 900px arrange a stacked block to side
+ * by side: [image] | [text]
+ * - (Home page hero with 3 stories)
+ */
+.arrange-600-900--horiz-hero {
+  @media (min-width: $px600) and (max-width: $px900) {
+    .block__img {
+      float: left;
+      width: 50%;
+      margin-bottom: 0;
+    }
+    .block__text {
+      padding-top: 0;
+      padding-left: $pad;
+      float: right;
+      width: 50%;
+    }
+    .block__headline {
+      font-size: rem(28);
+    }
+  }
+}
+
+/**
+ * Between 500px to 1200px, stack the block and text
+ * - (section front video thumbs)
+ */
+.stack-img-text--500-1200 {
+  @media (min-width: $px500) and (max-width: $px1200) {
+    .block__img {
+      display: block;
+      width: 100%;
+      float: none;
+      margin-bottom: 0;
+      padding: 0;
+    }
+    .block__text {
+      padding: $pad-half 0 0;
+      float: none;
+      width: 100%;
+      display: block;
+    }
+  }
+}
+
+/**
+ * After 600px, stack the block and text
+ * - (section front video thumbs)
+ */
+.stack-img-text--600 {
+  @media (min-width: $px600) {
+    .block__img {
+      display: block;
+      width: 100%;
+      float: none;
+      margin-bottom: 0;
+      padding: 0;
+      line-height: 0;
+    }
+    .block__text {
+      padding: $pad-half 0 0;
+      float: none;
+      width: 100%;
+      display: block;
+    }
+  }
+}
+
+/**
+ * From 600px - 700px go stack, then after 800px stack the block and text.
+ * - (home secondary news section)
+ */
+.stack-img-text--600-700__800 {
+  @media (min-width: $px600) and (max-width: $px700), (min-width: $px800) {
+    .block__img {
+      display: block;
+      width: 100%;
+      float: none;
+      margin-bottom: 0;
+      padding: 0;
+      line-height: 0;
+    }
+    .block__text {
+      padding: $pad-half 0 0;
+      float: none;
+      width: 100%;
+      display: block;
+    }
+  }
+}
+
+/**
+ * From 600px - 700px go stack, then agin from 900px - 1000px, and again after
+ * 1100px stack the block and text.
+ * - (section fronts with featured article and article footer)
+ */
+.stack-img-text--600-700__900-1100 {
+  @media (min-width: $px600) and (max-width: $px700), (min-width: $px900) and (max-width: $px1000), (min-width: $px1100) {
+    .block__img {
+      display: block;
+      width: 100%;
+      float: none;
+      margin-bottom: 0;
+      padding: 0;
+      line-height: 0;
+    }
+    .block__text {
+      padding: $pad-half 0 0;
+      float: none;
+      width: 100%;
+      display: block;
+    }
+  }
+}
+
+
+/*------------------------------------*\
+    $BLOCK PADDED
+\*------------------------------------*/
+
+// (mostly used on article recirc)
+.block__padded {
+  padding: $pad;
+  &.block--no-img {
+    .block__text {
+      padding-top: $pad-half;
+    }
+  }
+  @include mq($px400) {
+    padding: $pad-and-half;
+  }
+  .block__inner {
+    position: relative;
+  }
+  .kicker {
+    position: absolute;
+    top: rem(-32);
+    left: 0;
+    @include mq($px400) {
+      top: rem(-42);
+    }
+  }
+}
+
+
+/*------------------------------------*\
+    $CARDS (NEEDS WORK)
+\*------------------------------------*/
+
+.card {
+  font-family: $font;
+  padding: rem(17);
+  @include mq($px1000) {
+    padding: rem(25);
+  }
+}
+.card__form {
+  width: 100%;
+}
+
+
+/*------------------------------------*\
+    $WEATHER BLOCK
+\*------------------------------------*/
+
+.bw__degrees {
+  font-size: rem(38);
+  font-weight: bold;
+  line-height: .78;
+}
+.bw__icon {
+  height: rem(30);
+  width: rem(52);
+  vertical-align: baseline;
+}
+.bw__sponsor {
+  @include mq($px500, max) {
+    max-width: rem(180);
+  }
+}
+.weather__icon {
+  bottom: 0;
+  left: 0;
+}
+
+/**
+ * Narrow width view of weather module.
+ */
+.block__weather--narrow {
+  .bw__degrees {
+  }
+  .bw__source {
+    float: left;
+    margin-bottom: rem(5);
+    @include mq($px530) {
+      float: left;
+      margin-top: rem(14);
+      margin-bottom: 0;
+      margin-right: rem(15);
+    }
+  }
+  .bw__link {
+    float: right;
+    @include mq($px530) {
+      float: left;
+      margin-top: rem(14);
+    }
+  }
+  .bw__sponsor {
+    display: block;
+    clear: both;
+    @include mq($px530) {
+      float: right;
+      clear: none;
+    }
+  }
+}

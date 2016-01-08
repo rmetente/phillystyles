@@ -1,0 +1,32 @@
+/*------------------------------------*\
+    $HEADINGS
+\*------------------------------------*/
+
+h1 {
+  font-weight: 800;
+  font-size: rem(38);
+  line-height: 1.05;
+  @include mq($small-break) {
+    font-size: rem(44);
+  }
+  @include mq($medium-break) {
+    font-size: rem(54);
+  }
+}
+h2 {
+  font-size: rem(28);
+  font-weight: 800;
+}
+h3 {
+  font-size: rem(24);
+  font-weight: 800;
+}
+h4 {
+  font-size: rem(20);
+}
+h5 {
+  font-size: rem(18);
+}
+h6 {
+  font-size: rem(16);
+}

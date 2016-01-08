@@ -1,0 +1,585 @@
+/*------------------------------------*\
+    $GRIDS
+\*------------------------------------*/
+
+/**
+ * Grid Container
+ */
+.g {
+  //overflow: hidden;
+}
+
+/**
+ * Grid Item
+ */
+.gi {
+  width: 100%;
+  img {
+    display: block;
+  }
+  @media all and (min-width: $bp-med) {
+    float: left;
+  }
+}
+
+/**
+ * Grid Item Held - Check the specific grids below for how long it's held.
+ */
+@mixin gi-hold {
+  width: 100%;
+  float: none;
+  clear: both;
+}
+
+/**
+ * Grid 1up
+ */
+.g-1up {
+  .gi {
+    width: 100%;
+  }
+}
+
+/**
+ * Grid 2up
+ */
+.g-2up {
+  @include mq($px400) {
+    > .gi {
+      float: left;
+      width: 50%;
+      &:nth-of-type(odd) {
+        clear: left;
+      }
+    }
+    &.with-dividers {
+      > .gi {
+        &:nth-of-type(odd) {
+          padding-right: $pad;
+          border-right: $border-style;
+        }
+        &:nth-of-type(even) {
+          padding-left: $pad;
+        }
+      }
+    }
+    &.g--with-pad {
+      > .gi {
+        &:nth-of-type(odd) {
+          padding-right: $pad-half;
+        }
+        &:nth-of-type(even) {
+          padding-left: $pad-half;
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Grid 2up at 800px
+ */
+.g-2up--800 {
+  @include mq($px800) {
+    > .gi {
+      float: left;
+      width: 50%;
+      &:nth-of-type(odd) {
+        clear: left;
+      }
+    }
+    &.with-dividers {
+      > .gi {
+        &:nth-of-type(odd) {
+          padding-right: $pad;
+          border-right: $border-style;
+        }
+        &:nth-of-type(even) {
+          padding-left: $pad;
+        }
+      }
+    }
+    &.g--with-pad {
+      > .gi {
+        &:nth-of-type(odd) {
+          padding-right: $pad-half;
+        }
+        &:nth-of-type(even) {
+          padding-left: $pad-half;
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Grid 2up -- with wider right side
+ */
+.g-2up--wide-right {
+  @media (min-width: $px600) and (max-width: $px900), (min-width: $px1000) {
+    > .gi {
+      float: left;
+      width: 50%;
+      &:nth-of-type(odd) {
+        clear: left;
+      }
+    }
+    &.with-dividers {
+      > .gi {
+        &:nth-of-type(odd) {
+          padding-right: $pad;
+        }
+        &:nth-of-type(even) {
+          padding-left: $pad;
+          border-left: $border-style;
+        }
+      }
+    }
+    &.g--with-pad {
+      > .gi {
+        &:nth-of-type(odd) {
+          padding-right: $pad-half;
+        }
+        &:nth-of-type(even) {
+          padding-left: $pad-half;
+        }
+      }
+    }
+  }
+  @media (min-width: $px750) and (max-width: $px900), (min-width: $px1000) {
+    > .gi:first-child {
+      width: 32.55%;
+    }
+    > .gi:last-child {
+      width: 67%;
+    }
+    .touchevents & {
+      > .gi:first-child {
+        width: 32%;
+      }
+    }
+  }
+}
+
+/**
+ * Grid Half (Always displayed side by side)
+ */
+.g-half {
+  > .gi {
+    float: left;
+    width: 50%;
+    &:nth-of-type(odd) {
+      clear: left;
+    }
+  }
+}
+
+/**
+ * Grid with a maximum of 3 items
+ */
+.g-max3 {
+  @media (min-width: $px600) and (max-width: $px900) {
+    &.g--with-pad {
+      > .gi:first-child {
+        padding-right: $pad;
+      }
+      > .gi:nth-child(even) {
+        padding-left: $pad;
+      }
+    }
+    > .gi {
+      float: left;
+      width: 50%;
+      &:nth-of-type(3n+3) {
+        clear: left;
+        width: 100%;
+        padding-right: 0;
+      }
+    }
+  }
+  @media (min-width: $px900) {
+    &.g--with-pad {
+      > .gi {
+        padding-right: $pad-and-half;
+      }
+    }
+    > .gi {
+      float: left;
+      width: 33.3333333%;
+      &:nth-of-type(3n+3) {
+        padding-right: 0;
+      }
+      &:nth-of-type(3n+4) {
+        clear: left;
+      }
+    }
+  }
+}
+
+// Grid 4up
+.g-4up {
+  @include g-4up;
+}
+
+// Grid 4up with
+.g-4up-v2 {
+  @include g-4up($px600, $px800);
+}
+
+/**
+ * Grid 4up Flex
+ */
+.g-4up-flex {
+  // Layout:
+  // []
+  // []
+  // []
+  // []
+  > .gi {
+    margin-bottom: $space;
+  }
+  @include mq($px450) {
+    // Layout:
+    // [][]
+    // [][]
+    @include display(flex);
+    @include flex-wrap(wrap);
+    @include align-items(stretch);
+    @include justify-content(center);
+    > .gi {
+      float: left;
+      @include flex-grow(1);
+      width: calc(50% - #{$space-half});
+      &:nth-of-type(2n+1) {
+        clear: both;
+      }
+    }
+  }
+  @media (min-width: $px450) and (max-width: $px850) {
+    &.g--with-space {
+      > .gi {
+        &:nth-of-type(odd) {
+          margin-right: $space-half;
+        }
+        &:nth-of-type(even) {
+          margin-left: $space-half;
+        }
+      }
+    }
+  }
+  @include mq($px850) {
+    // Layout: [][][][]
+    > .gi {
+      width: calc(25% - 8px);
+      &:nth-of-type(2n+1) {
+        clear: none;
+      }
+      &:nth-of-type(4n+1) {
+        clear: left;
+      }
+    }
+    &.g--with-space {
+      > .gi {
+        margin-left: $space-half;
+        &:nth-of-type(odd),
+        &:nth-of-type(even) {
+          margin-right: 0;
+          margin-left: $space-half;
+        }
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+  @include mq($px1000) {
+    > .gi {
+      width: calc(25% - 23px);
+    }
+    &.g--with-space {
+      > .gi {
+        margin-left: $space-and-half;
+        &:nth-of-type(odd),
+        &:nth-of-type(even) {
+          margin-right: 0;
+          margin-left: $space-and-half;
+        }
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Grid Quarter (Always displayed side by side)
+ */
+.g-quarter {
+  > .gi {
+    float: left;
+    width: 24%;
+
+    &:nth-of-type(4n+1) {
+      clear: left;
+    }
+  }
+}
+
+/**
+ * Grid with a maximum of 4 items.
+ */
+.g-max4 {
+  @include mq($px400) {
+    > .gi {
+      float: left;
+      width: 50%;
+      &:nth-of-type(2n+1) {
+        clear: both;
+      }
+    }
+    > .gi-hold {
+      @include gi-hold;
+    }
+  }
+  > .gi-hold {
+    @media (min-width: $px500) and (max-width: $px650) {
+      float: left;
+      width: 50%;
+      clear: none;
+    }
+  }
+  @include mq($px650) {
+    > .gi {
+      width: 33.3333333%;
+      &:nth-of-type(2n+1) {
+        clear: none;
+      }
+      &:nth-of-type(3n+1) {
+        clear: left;
+      }
+    }
+    > .gi-hold {
+      float: left;
+      width: 70%;
+      clear: none;
+    }
+  }
+  @include mq($px1000) {
+    > .gi,
+    > .gi-hold {
+      width: 25%;
+      &:nth-of-type(3n+1) {
+        clear: none;
+      }
+      &:nth-of-type(4n+1) {
+        clear: left;
+      }
+    }
+  }
+}
+
+
+/**
+ * Grid 5up Flex
+ */
+.g-5up-flex {
+  // Layout:
+  // []
+  // []
+  // []
+  // []
+  // []
+  > .gi {
+    margin-bottom: $space;
+  }
+  @include mq($px450) {
+    // Layout:
+    // [  ]
+    // [][]
+    // [][]
+    @include display(flex);
+    @include flex-wrap(wrap);
+    @include align-items(stretch);
+    @include justify-content(center);
+    > .gi {
+      float: left;
+      width: calc(50% - #{$space-half});
+      @include flex-grow(1);
+      &:first-child {
+        width: 100%;
+      }
+    }
+  }
+  @media (min-width: $px450) and (max-width: $px600) {
+    &.g--with-space {
+      > .gi {
+        &:nth-of-type(even) {
+          margin-right: $space-half;
+        }
+        &:nth-of-type(odd) {
+          margin-left: $space-half;
+        }
+        &:first-child {
+          margin-left: 0;
+          width: 100%;
+        }
+      }
+    }
+  }
+  @media (min-width: $px600) and (max-width: $px700) {
+    &.g--with-space {
+      > .gi {
+        width: 33.333%;
+        &:first-child,
+        &:nth-child(2) {
+          width: 50%;
+          margin-left: 0;
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  @include mq($px700) {
+    // Layout: [][][][][]
+    > .gi,
+    > .gi:first-child {
+      width: calc(20% - 14px);
+      &:nth-of-type(2n+1) {
+        clear: none;
+      }
+      &:nth-of-type(4n+1) {
+        clear: left;
+      }
+    }
+    &.g--with-space {
+      margin: 0;
+      > .gi {
+        margin-left: $space-half;
+        padding: 0;
+        &:nth-of-type(odd),
+        &:nth-of-type(even) {
+          margin-right: 0;
+          margin-left: $space-half;
+        }
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+  @include mq($px1000) {
+    > .gi,
+    > .gi:first-child {
+      width: calc(20% - 27px);
+      &:nth-of-type(even),
+      &:nth-of-type(4n+1) {
+        clear: none;
+      }
+    }
+    &.g--with-space {
+      > .gi {
+        margin-left: $space-and-half;
+        &:nth-of-type(odd),
+        &:nth-of-type(even) {
+          margin-right: 0;
+          margin-left: $space-and-half;
+        }
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
+
+
+/**
+ * Grid 5up
+ */
+.g-max5 {
+  > .gi {
+    float: left;
+    width: 50%;
+
+    &:nth-of-type(2n+1) {
+      clear: both;
+    }
+  }
+  @media all and (min-width: $bp-small-3) {
+    > .gi {
+      width: 33.3333333%;
+
+      &:nth-of-type(2n+1) {
+        clear: none;
+      }
+
+      &:nth-of-type(3n+1) {
+        clear: left;
+      }
+    }
+  }
+  @media all and (min-width: $bp-med) {
+    > .gi {
+      width: 25%;
+
+      &:nth-of-type(3n+1) {
+        clear: none;
+      }
+
+      &:nth-of-type(4n+1) {
+        clear: left;
+      }
+    }
+  }
+  @media all and (min-width: $bp-med-2) {
+    > .gi {
+      width: 20%;
+
+      &:nth-of-type(4n+1) {
+        clear: none;
+      }
+
+      &:nth-of-type(5n+1) {
+        clear: left;
+      }
+    }
+  }
+}
+
+/**
+ * 4 Stacked Items
+ */
+.g-4-stacked {
+  padding: 0 $pad;
+  @include mq($px450) {
+    > .gi:not(.gi-hold) {
+      float: left;
+      width: 48%;
+      &:nth-of-type(2n+1) {
+        clear: both;
+      }
+      &:nth-child(even) {
+        float: right;
+      }
+    }
+  }
+  @include mq($px750) {
+    > .gi {
+      width: 23%;
+      margin-right: 2.5%;
+      &:nth-of-type(2n+1) {
+        clear: none;
+      }
+      &:nth-child(even) {
+        float: left;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  @include mq($px900) {
+    padding: 0;
+  }
+}

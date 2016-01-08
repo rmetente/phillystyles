@@ -1,0 +1,168 @@
+/*------------------------------------*\
+    $FOOTER
+\*------------------------------------*/
+
+.footer--pad {
+  padding-left: $pad;
+  padding-right: $pad;
+}
+
+.footer__logo {
+  text-align: center;
+  margin-bottom: $space-double;
+  @include mq($px600) {
+    margin-bottom: rem(50);
+    margin-top: rem(7);
+  }
+  @include mq($px720) {
+    padding-bottom: $pad;
+    text-align: left;
+    margin-top: 0;
+    border-bottom: $border-opacity;
+  }
+}
+.fl__link {
+  width: rem(256);
+  height: rem(45);
+  display: block;
+  @include center-block;
+  margin-bottom: $space;
+  img {
+    width: 100%;
+  }
+  @include mq($px720) {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 0;
+    margin-right: $space-half;
+    width: rem(200);
+    height: rem(39);
+  }
+}
+
+/**
+ * Footer Social
+ */
+.footer__social {
+  text-align: center;
+  margin-bottom: $space-half;
+  @include mq($px600) {
+    margin-bottom: 0;
+  }
+  @include mq($px720) {
+    position: absolute;
+    right: 0;
+    top: rem(18);
+    text-align: right;
+    width: 100%;
+  }
+}
+.f-social__link {
+  padding: $pad-half;
+  @include mq($px750) {
+    margin-left: $space-half;
+  }
+}
+.f-social__icon {
+  width: 25px;
+  height: 25px;
+}
+.f-social__text {
+  vertical-align: super;
+}
+
+
+/**
+ * Subscribe Section
+ */
+.footer__subscribe {
+  margin-bottom: $space;
+}
+.f-sub__logo,
+.f-sub__paper {
+  width: 50%;
+  @media (min-width: $px400) and (max-width: $px600) {
+    width: 100%;
+    float: none;
+  }
+}
+.f-sub__logo {
+  margin-bottom: $space-half;
+  opacity: .7;
+  width: 50%;
+  margin-bottom: rem(14);
+  padding-left: $pad;
+  float: left;
+  @media (min-width: $px400) and (max-width: $px600) {
+    width: 100%;
+    float: none;
+    padding-left: 0;
+  }
+}
+.f-sub__inquirer-logo {
+  svg {
+    width: rem(140);
+  }
+}
+.f-sub__dailynews-logo {
+  svg {
+    width: rem(120);
+  }
+}
+.f-sub__paper {
+  max-height: rem(150);
+  max-width: rem(220);
+  float: left;
+  @media (min-width: $px400) and (max-width: $px600) {
+    width: 100%;
+    float: none;
+  }
+  @include mq($px800) {
+    max-width: rem(190);
+    max-height: rem(170);
+  }
+}
+.f-sub__link-list {
+  width: 50%;
+  float: left;
+  padding-left: $pad;
+  @media (min-width: $px400) and (max-width: $px600) {
+    width: 100%;
+    float: none;
+    padding-left: 0;
+  }
+  li {
+    @include mq($px800) {
+      font-size: rem(18);
+    }
+  }
+}
+.f-sub__inquirer {
+  margin-bottom: $space-and-half;
+  @include mq($px400) {
+    margin-bottom: 0;
+  }
+}
+.f-sub__inquirer-paper {
+  padding: rem(6);
+  @include mq($px400) {
+    padding-right: 3%;
+  }
+}
+.f-sub__dailynews {
+  @include mq($px400) {
+    padding-left: 3%;
+  }
+  @include mq($px900) {
+    padding-left: 6%;
+  }
+  @include mq($px1200) {
+    padding-left: 9%;
+  }
+}
+
+.copyright {
+  font-size: rem(14);
+  margin-bottom: rem(4);
+  line-height: 1.3;
+}
