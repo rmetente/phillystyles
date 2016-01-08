@@ -535,7 +535,31 @@ div[style*="visibility: hidden; display: block;"]:empty {
 .ad.center {
   clear: both;
 }
+.slate-bg {
+  background-color: $slate-light;
+  border-bottom: none;
+  padding-top: $pad;
+  padding-bottom: $pad-half;
 
+  h2.block__title {
+    color: $slate;
+    font-weight: 400;
+    border-bottom: $border-style-slate;
+    padding-left: $pad;
+    padding-right: $pad;
+    padding-bottom: $pad-half;
+  }
+  
+  h2.block__title b {
+    font-weight: 400;
+  }
+
+  li.block__list-item {
+    padding-left: $pad;
+    padding-right: $pad;
+  }
+
+}
 
 /*------------------------------------*\
     $SLIDE UP FIGURE CAPTION
@@ -591,8 +615,56 @@ div[style*="visibility: hidden; display: block;"]:empty {
     margin-top: -1px;
     width: 100%;
     height: 1px;
-    border-top: $border-style-thick;
     position: absolute;
+  }
+}
+
+#noteComments {
+  background-color: $gray-light-3;   
+  border-radius: .5rem .5rem 0 0;
+  border-bottom: $border-style-thick;
+  padding: rem(30) rem(30) rem(50);
+  color: #000;
+  clear: both;
+  font-family: $font;
+  font-weight:400;
+  font-size: rem(16);
+  line-height:1.3;
+
+  .guide {
+    font-weight:800;
+  }
+
+  .guideLinks {
+    padding-top: 1.25rem;
+    font-weight: 800;      
+  }
+
+  .note {
+    padding-top:$pad-half;
+  }
+}
+
+#loadComments {
+  top: -2.188rem;
+  background-color: $gray-light-3;
+  color: $white;
+  background: url(http://media.philly.com/designimages/comments_icon.png) 1rem 1rem/1.25rem 1.25rem no-repeat $blue;
+  padding-left: 3.125rem;
+}
+
+/*------------------------------------*\
+    $POLLS
+\*------------------------------------*/
+
+.pollDisplay {
+  .size--small {
+    max-width: 100%;
+    margin: 1.875rem auto;
+  }
+  .alignleft {
+    width: 100%;
+    float: none;
   }
 }
 

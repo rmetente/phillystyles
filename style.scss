@@ -36,6 +36,9 @@
  * Galleries............Styling for slideshows, carousels and photo galleries.
  * Ads..................Site advertising.
  * Forms................Specific form styling.
+ * Weather..............Weather styles.
+ * Locations............Location items styles.
+ * Containers...........Container specific styles.
  *
  * TEXT
  * Text.................Various text-specific class definitions.
@@ -49,6 +52,7 @@
  * THIRD PARTY
  * Stats................Style overrides for the stats widget .
  * Owl Carousel.........Base styles for the gallery experience.
+ * Popup................Popup plugin.
  *
  * MODIFIERS
  * Animations...........Animation and transition effects.
@@ -66,7 +70,7 @@
 /*------------------------------------*\
     $SETTINGS
 \*------------------------------------*/
-@import "bourbon";
+@import "bourbon/bourbon";
 @import "settings.variables.scss";
 
 /*------------------------------------*\
@@ -114,6 +118,10 @@
 @import "objects.galleries";
 @import "objects.ads";
 @import "objects.forms";
+@import "objects.weather";
+@import "objects.locations";
+@import "objects.containers";
+
 
 
 /*------------------------------------*\
@@ -136,6 +144,7 @@
 \*------------------------------------*/
 @import "vendor.stats";
 @import "vendor.carousel";
+@import "vendor.popup";
 
 
 /*------------------------------------*\

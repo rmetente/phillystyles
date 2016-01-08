@@ -458,3 +458,16 @@
   top: 0;
   opacity: 0;
 }
+#gallerybackbtn {
+  text-transform: uppercase;
+  color: $white;
+  vertical-align: middle;
+  font-size: $font-size-small;
+
+  a {
+    font-weight: 700;
+    color: $white;
+    display: block;
+    padding: .75rem .5rem .5rem;
+  }
+}

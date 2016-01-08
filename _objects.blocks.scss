@@ -317,7 +317,8 @@
 .block__list-item-flex {
   width: 100%;
   @include align-content(flex-start);
-  border-bottom: $border-style-light;
+  //border-bottom: $border-style-light;
+  border-bottom: none;
   padding-bottom: $pad-half;
   @media (min-width: $px600) {
     width: 50%;

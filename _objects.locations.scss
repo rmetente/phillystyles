@@ -1,0 +1,209 @@
+/*------------------------------------*\
+    $RESTAURANTS
+\*------------------------------------*/
+
+.restaurantListing {
+    padding: 0;
+
+    .title {
+        text-align: center;
+    }
+
+    .title a {
+        color: #000;
+        font-weight: 700;
+        text-decoration: none;
+        font-size: 150%;
+        font-family: Georgia, Palatino, Times New Roman, serif;        
+    }
+
+    .cuisines {
+        font-style: italic;
+        color: #444;
+        font-size: 78.6%;
+        text-align: center;        
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 10px 0;
+        clear: both;        
+    }
+    ul.locationDetails ul li b {
+        font-weight: 400;
+    }
+}
+
+#restaurantSearchForm label,
+.restaurantListing .label,
+.restaurantSearch .address {
+    font-weight: 700;
+}
+.restaurantListing ul.phone {
+    margin: 5px 0 0;
+}
+.restaurantListing ul.linkURL {
+    margin: 3px 0 0;
+}
+.restaurantListing ul.address {
+    text-align: left;
+    padding: 5px 8px;
+    margin: 5px 0;
+}
+.restaurantListing ul.location li,
+.restaurantListing ul.phone li {
+    display: inline;
+}
+.restaurantListing .reservations {
+    background-color: #9a0101;
+    text-transform: uppercase;
+    margin: 10px 8px;
+}
+.restaurantListing .reservations span {
+    display: block;
+    font-style: italic;
+    text-transform: none;
+}
+.restaurantListing .reservations a.bl {
+    color: #fff;
+    text-decoration: none;
+}
+.restaurantListing .reservations li {
+    background-color: #990002;
+    text-align: center;
+    padding: 4px 15px;
+    -moz-border-radius: 4px;
+    -khtml-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+.restaurantListing ul.locationDetails {
+    padding: 10px 8px;
+}
+.restaurantListing ul.locationDetails ul li.restaurantRating img {
+    vertical-align: middle;
+    padding-bottom: 3px;
+}
+#restaurantSearchForm input,
+#restaurantSearchForm select {
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, .1) inset;
+    text-transform: capitalize;
+    padding: 15px 10px;
+    height: 50px;
+    width: 100%;
+}
+.restaurantListing ul.locationDetails li,
+.restaurantListing ul.locationDetails ul li {
+    display: inline;
+}
+.restaurantListing ul.locationDetails .firstCol {
+    font-size: 92.9%;
+    font-weight: 700;
+}
+.restaurantListing #storyHeadline h1 {
+    margin: 0 8px;
+}
+.restaurantSearch .img_border {
+    border: 1px solid #000;
+}
+#sectionHeaderCustom {
+    display: none;
+}
+.restaurantSearch .relatedlist-media img {
+    margin-right: 8px;
+}
+.restaurantSearch .cuisines {
+    font-style: normal;
+}
+.restaurantSearch ul li ul.listing li {
+    border-top: medium none;
+    display: block;
+}
+.restaurantSearch .address,
+.restaurantSearch ul,
+.restaurantSearch ul a,
+.restaurantSearch ul li,
+.restaurantSearch ul li a {
+    font-size: 11px;
+    line-height: 14px;
+}
+.restaurantSearch .largetitle {
+    font-size: 18px;
+}
+#restaurantSearchForm {
+    background-color: #DEDEDE;
+    border: 1px solid #CCC;
+    margin: 0 8px;
+    padding: 10px;
+}
+#restaurantSearchForm label {
+    color: #444;
+    display: block;
+    font-size: 87.5%;
+    text-transform: uppercase;
+}
+#restaurantSearchForm input {
+    border: 1px solid #C3C3C3;
+    font: italic 15px arial, verdana, hevetica, sans-serif;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+#restaurantSearchForm input[type=submit] {
+    font-style: normal;
+    font-weight: 700;
+    text-align: center;
+    background-color: #048;
+    color: #fff;
+    text-transform: uppercase;
+    border: none;
+    padding: 15px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0;
+    width: 100%;
+    height: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+#restaurantSearchForm select {
+    border: 1px solid #C3C3C3;
+    font: italic 15px arial, verdana, hevetica, sans-serif;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+    color: #444;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background: url(http://media.philly.com/designimages/main_menu_shop_arrow_blue.png) 95% center no-repeat #fff;
+}
+.eventsTitle h1 {
+    margin: 4px 0;
+    font: italic 900 100% georgia, palatino, times new roman, serif;
+    color: #444;
+    text-align: center;
+    font-size: 16px;
+}
+#movieTheater {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+}
+#movieTheater .container_tabtwo .shadetabs {
+    display: none
+}
+#movieTheater .tabcontent {
+    margin-bottom: 1.25rem;
+}

@@ -1,7 +1,63 @@
 /*------------------------------------*\
     $FOOTER
 \*------------------------------------*/
-
+.footer__secondary .f-sec__link-list .headlineonly .hrefWrap .b_sq {
+  display:none;
+}
+.footer__secondary .f-sec__link-list h2 {
+  margin-bottom: rem(10);
+  letter-spacing: 1;
+  text-transform: uppercase;
+  color: $gray-med;
+  font-weight: 500;
+  font-size: rem(14);
+}
+.footer__secondary .f-sec__link-list .headlineonly .hrefWrap {
+  margin-bottom: rem(10);
+  font-size: rem(16);
+  color: $white;
+  font-weight: 400;
+}
+.footer__secondary input.nl__submit {
+  position: absolute;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  right: 0;
+  top: 0;
+  margin:0;
+  height: 100%;
+  font-weight: 500;
+  padding: rem(10) rem(20);
+  border-radius: 0;
+  background-color: $dim;
+  font-size: rem(16);
+}
+.footer__secondary input.bg--slate-light-2 {
+  margin: 0;
+}
+.primary-nav--full ul.headlineonly li {
+  display: inline-block;
+  margin-bottom: rem(10);
+  
+  ul.headlineonly {
+      overflow: hidden;
+      white-space: nowrap;
+      width: 100%;
+  } 
+  ul.headlineonly li a {
+      color: #000;
+      line-height: 1;
+      font-size: rem(14);
+      padding: rem(10);
+      display: block;
+      font-weight: 400;
+  }
+  ul.headlineonly li a b {
+      text-transform: uppercase;
+      font-size: rem(14);
+      font-weight: 600;
+  }       
+}
 .footer--pad {
   padding-left: $pad;
   padding-right: $pad;

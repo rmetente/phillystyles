@@ -24,6 +24,7 @@ $inner-max-small: (740/$defaultpx) + 0em;
 $gray: #666;
 $gray-light: #F1F1F2;
 $gray-light-2: #D1D2D4;
+$gray-light-3: #eee;
 $gray-very-light: #fafafa;
 $gray-med: #a7a7a7;
 $gray-med-2: #666;
@@ -31,6 +32,7 @@ $gray-dark: #222222;
 $gray-dark-2: #252525;
 $white: #fff;
 $black: #000;
+$blue-bright:#0863a0;
 $dim: rgba(0,0,0,0.5);
 $error: #f00;
 $valid: #089e00;
@@ -105,11 +107,13 @@ $space-and-half: $space*1.5;
 $space-double: $space*2;
 $space-quad: $space*4;
 $space-half: $space/2;
+$space-third: $space/3;
 $pad: rem(20);
 $pad-and-half: $pad*1.5;
 $pad-double: $pad*2;
 $pad-half: $pad/2;
 $pad-quarter: $pad/4;
+$pad-third: $pad/3;
 
 /**
  * Border Styles
@@ -120,6 +124,7 @@ $border-opacity: 1px solid rgba($white, .2);
 $border-style: 1px solid $gray-light-2;
 $border-style-thick: 3px solid $gray-light-2;
 $border-style-light: 1px solid $gray-light;
+$border-style-slate: 1px solid $slate;
 $border-style-white: 1px solid $white;
 $border-style-dark: 1px solid $black;
 

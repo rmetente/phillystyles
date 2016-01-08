@@ -1,0 +1,160 @@
+/*------------------------------------*\
+    $CONTAINERS
+\*------------------------------------*/
+
+/*------------------------------------*\
+    $CONTAINERS - CALENDAR
+\*------------------------------------*/
+.card__calendar .misc_inner .card__inner .container_inner .smalltext,
+.card__calendar .misc_inner .card__inner .container_inner .smalltext b {
+	font-size: .75rem;
+	color: $gray-med;
+	font-weight: 400;
+	line-height: 1.3;
+}
+.card__calendar .misc_inner .card__inner .container_inner dl.headlineonly dt .b_sq {
+    display: none;
+}
+.card__calendar .misc_inner .card__inner .container_inner dl {
+	border-top: 1px solid $black;
+	padding-top: 1.25rem;
+	margin-top: 1.25rem;
+}
+.card__calendar .misc_inner .card__inner .container_inner dl.headlineonly dt {
+    border-bottom: 1px solid $black;
+    margin-bottom: 1.25rem;
+    padding-bottom: 1.25rem
+}
+.card__calendar .misc_inner .card__inner .container_inner dl.headlineonly dt:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+.card__calendar h2.block__title {
+    background-color: $slate;
+    margin: 0;
+    padding: .5rem 1.25rem .375rem;
+}
+.card__calendar .misc_inner {
+    background-color: $slate-light;
+    padding: 1.25rem;
+}
+.card__calendar .misc_inner .card__inner,
+.card__calendar .misc_inner .card__inner h2 {
+    background-color: $slate-dark-2;
+    font-size: .6875rem;
+    line-height: 1;
+    margin-bottom: .5rem;
+    letter-spacing: 1px;
+    padding-top: .5rem;
+}
+.card__calendar .misc_inner .card__inner h2 {
+    padding: .5rem .875rem;
+    font-size: .6875rem;
+}
+.card__calendar {
+    padding: 0
+}
+.card__calendar .misc_inner .card__inner .container_inner {
+    padding: 0 .875rem .5rem;
+}
+.card__calendar .misc_inner .card__inner .container_inner .digest-headline {
+    font-size: 1rem;
+    font-weight: 600;
+    display: block;
+    line-height: 1.3;
+}
+/*------------------------------------*\
+    $CONTAINERS - LIVE LIFE LOVE
+\*------------------------------------*/
+.lll-container h2 img {
+    max-width: 50%
+}
+
+/*------------------------------------*\
+    $CONTAINERS - FRIDGE
+\*------------------------------------*/
+
+.section__fridge--vert .card__text-links a {
+    font-size: rem(22);
+    color: $red;
+}
+.section__fridge--vert .container h2 {
+    text-transform: uppercase;
+    font-size: rem(14);
+}
+.section__fridge--vert dl.headlineonly {
+    padding-top: rem(20);
+    padding-bottom: rem(20);
+}
+.section__fridge--vert dl.headlineonly dt {
+    margin-bottom: rem(10);
+    font-weight: 400;
+}
+.section__fridge--vert dl.headlineonly dt.gi {
+    float: none;
+}
+
+/*------------------------------------*\
+    $CONTAINERS - NDN
+\*------------------------------------*/
+
+#ndn-widget-embed-1 {
+    padding-bottom: rem(20);
+}
+
+/*------------------------------------*\
+    $CONTAINERS - FOOTER RECIRC
+\*------------------------------------*/
+
+.article-recirc .container_inner .block__text .kicker {
+    margin-bottom: 0
+}
+footer.article-recirc .sec-news__primary--var2 a .block__text {
+    padding-top: rem(4);
+}
+footer.article-recirc .space--btm h2 {
+    margin-bottom: rem(8);
+}
+footer.article-recirc .block__hero .block__headline {
+    margin-bottom: rem(7);
+}
+.block__hero img.rating,
+footer.article-recirc .sec-news__primary--var2 a .block__text img.rating,
+img.rating {
+    width: auto;
+}
+
+/*------------------------------------*\
+    $CONTAINERS - TITLES
+\*------------------------------------*/
+
+.border--top--slate .kicker {
+    padding: .375rem .375rem .3125rem;
+    background-color: $slate;
+    font-weight: 100;
+    color: $white;
+}
+.border--top--slate .kicker:hover {
+    color: $white;
+    background: $slate-light-2;
+}
+.border--top--red .kicker {
+    color: $red-2;
+    background-color: $white;
+    padding: 0;
+}
+.mw--400 h2 {
+    font-size: rem(16);
+    margin-bottom: rem(12);
+}
+.mw--400 .kicker,
+.mw--400 .kicker a {
+    color: $slate-light-2;
+}
+.mw--400 span.li__title {
+    color: $blue;
+    font-weight: 400;
+}
+
+

@@ -11,7 +11,7 @@
   border-bottom-style: solid;
   border-bottom-width: 4px;
   border-bottom-color: $red;
-  background-color: $slate-light;
+  background-color: $slate-light-2;
   min-height: rem($small-header-height + 2px);
   @include mq($px800) {
     height: rem($wide-header-height + 2px);
@@ -19,6 +19,10 @@
   &.this-is-active {
     display: none;
   }
+
+}
+#welcome .announcement-bar {
+    border-bottom-color: $slate-light-2;
 }
 .no-flexbox .announcement-bar {
   @include mq($px800) {

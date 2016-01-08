@@ -1,0 +1,17 @@
+/*------------------------------------*\
+    $SPORTS STAT WIDGET
+\*------------------------------------*/
+
+.white-popup {
+    background: $white;
+    padding: rem(1.25);
+    width: auto;
+    max-width: 31.25rem;
+    margin: $space-double auto 0;
+    font-size: $font-size-small;
+    position:relative;
+    h1{
+    	font-size: $font-size-med;
+    	padding: 1.25rem 0;
+    }
+}
