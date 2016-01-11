@@ -23,6 +23,11 @@ input[type="submit"] {
   }
 }
 
+input.bg--black {
+  background-color: $black;
+  -webkit-appearance: none;
+  border-radius: 0;
+}
 /**
  * Button - Other (Not really sure about this yet. Need more elements to flesh out.)
  */

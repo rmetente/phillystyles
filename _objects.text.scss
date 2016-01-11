@@ -215,7 +215,9 @@
 .lower {
   text-transform: lowercase;
 }
-
+.capital {
+  text-transform: capitalize;
+}
 /**
  * Text Decorations
  */
