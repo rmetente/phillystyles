@@ -57,16 +57,16 @@ $header-icon-container-width-wide: 220;
 .primary-nav--full {
   opacity: 1;
   bottom: rem(-2);
-  ul.headlineonly {
+  ul {
       overflow: hidden;
       white-space: nowrap;
       width: 100%
   }  
-  ul.headlineonly li {
+  ul li {
       display: inline-block;
       margin-bottom: .625rem;
   }
-  ul.headlineonly li a {
+  ul li a {
       color: #000;
       line-height: 1;
       font-size: rem(14);
@@ -74,7 +74,7 @@ $header-icon-container-width-wide: 220;
       display: block;
       font-weight: 400;
   }
-  ul.headlineonly li a b {
+  ul li a b {
       text-transform: uppercase;
       font-size: rem(14);
       font-weight: 600;

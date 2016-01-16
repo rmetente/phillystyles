@@ -1,7 +1,7 @@
 /*------------------------------------*\
     $FOOTER
 \*------------------------------------*/
-.footer__secondary .f-sec__link-list .headlineonly .hrefWrap .b_sq {
+.footer__secondary .f-sec__link-list .hrefWrap .b_sq {
   display:none;
 }
 .footer__secondary .f-sec__link-list h2 {
@@ -12,7 +12,7 @@
   font-weight: 500;
   font-size: rem(14);
 }
-.footer__secondary .f-sec__link-list .headlineonly .hrefWrap {
+.footer__secondary .f-sec__link-list .hrefWrap {
   margin-bottom: rem(10);
   font-size: rem(16);
   color: $white;
@@ -35,16 +35,16 @@
 .footer__secondary input.bg--slate-light-2 {
   margin: 0;
 }
-.primary-nav--full ul.headlineonly li {
+.primary-nav--full ul li {
   display: inline-block;
   margin-bottom: rem(10);
   
-  ul.headlineonly {
+  ul {
       overflow: hidden;
       white-space: nowrap;
       width: 100%;
   } 
-  ul.headlineonly li a {
+  ul li a {
       color: #000;
       line-height: 1;
       font-size: rem(14);
@@ -52,7 +52,7 @@
       display: block;
       font-weight: 400;
   }
-  ul.headlineonly li a b {
+  ul li a b {
       text-transform: uppercase;
       font-size: rem(14);
       font-weight: 600;
