@@ -930,7 +930,7 @@
 .section__sub-island,
 .section__sub-island--home {
   padding: $pad;
-  background: url(../designimages/bg_city-skyline.jpg) no-repeat center center;
+  background: url(http://media.philly.com/designimages/bg_city-skyline.jpg) no-repeat center center;
   @include mq($px800) {
     padding: $pad-double;
   }

@@ -127,7 +127,7 @@
     background-position: center left;
     background-repeat: no-repeat;
     background-size: rem(15) rem(15);
-    background-image: url('../designimages/camera.svg');
+    background-image: url('http://media.philly.com/binary/camera.svg');
     @include mq($px600) {
       top: 1px;
     }
@@ -185,14 +185,14 @@
   left: 0;
   span {
     left: rem(7);
-    background-image: url('../designimages/arrow-left.svg');
+    background-image: url('http://media.philly.com/binary/arrow-left.svg');
   }
 }
 .owl-next {
   right: 0;
   span {
     right: rem(7);
-    background-image: url('../designimages/arrow-right.svg');
+    background-image: url('http://media.philly.com/binary/arrow-right.svg');
   }
 }
 .owl-prev,
@@ -227,7 +227,7 @@
   background-position: center center;
   background-size: 50%;
   background-repeat: no-repeat;
-  background-image: url('../designimages/x--white.svg');
+  background-image: url('http://media.philly.com/binary/x--white.svg');
 }
 .gallery__share {
   display: none;

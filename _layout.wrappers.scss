@@ -182,3 +182,28 @@
 [id^=atoms-] {
   padding: $pad;
 }
+
+.shift-left--450 {
+  float:left;
+  margin-right:4%;
+  width: 46%; 
+  max-width:22.5rem;
+}
+.shift-right--450 {
+  float: right;
+  position: relative;
+  width: 48%;
+  z-index: 1;
+  max-width:22.5rem;
+}
+
+@media (min-width: 0px) and (max-width: 600px) {
+  .shift-left--450 {
+      width: 100%;
+      float:none; 
+  }
+  .shift-right--450 {
+      width: 100%;
+      float:none;
+  }
+}
