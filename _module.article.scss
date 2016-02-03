@@ -679,12 +679,17 @@ $author-modal-avatar-width: 160;
   max-width: rem(860);
   margin-top: $space-double;
   left: 50%;
-  width: 90%;
+  width: 60%;
   @include transform(translate(-50%, 0));
   padding: $pad;
   display: none;
   @include mq($px600) {
     padding: $pad-double;
+  }
+}
+.author-modal {
+  @media (max-width: $px800) {
+    width: 90%;
   }
 }
 .am__photo {
@@ -703,7 +708,7 @@ $author-modal-avatar-width: 160;
 .am__social {
   @media (min-width: $px450) and (max-width: $px700) {
     padding-top: rem(25);
-    padding-left: rem($author-modal-avatar-width + 25);
+    /*padding-left: rem($author-modal-avatar-width + 25);*/
   }
 }
 .am__social-link {
@@ -732,7 +737,7 @@ $author-modal-avatar-width: 160;
 }
 .am__details {
   @include mq($px700) {
-    padding-left: rem($author-modal-avatar-width + 40);
+    /*padding-left: rem($author-modal-avatar-width + 40);*/
   }
 }
 

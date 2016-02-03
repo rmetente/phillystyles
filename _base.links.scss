@@ -16,10 +16,14 @@ a {
     color: $gray-dark;
   }
 }
-.article-meta .byline a.js-open-author-modalOFF {
-    color: $gray-dark;
+.article-meta .byline a.open-modals {
+  cursor: pointer;
 }
-/**
+.article-meta .byline a.js-open-author-modal-1OFF {
+    color: $gray-dark;
+    cursor: text;
+}
+/*
  * Inverted Links
  */
 .invert-links {

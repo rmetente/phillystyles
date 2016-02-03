@@ -191,6 +191,7 @@
     background-image: url(http://cdn.hymnal.voxmedia.com/uploads/asset/file/8025/QX60_Eater_Reskin_RTD_Left.jpg), url(http://cdn.hymnal.voxmedia.com/uploads/asset/file/8026/QX60_Eater_Reskin_RTD_Right.jpg), url(http://cdn.hymnal.voxmedia.com/uploads/asset/file/8027/QX60_Eater_Reskin_RTD_Middle.jpg);
     background-repeat: no-repeat, no-repeat, repeat-x;
     background-position: top left, top right, top center;
+    background-image:none;
   }
   @media (min-width: $px1200) and (max-width: $px1400) {
     .block__feature-headline {

@@ -162,6 +162,98 @@
 }
 
 /**
+ * Grid 2up -- with wider left side
+ */
+.g-2up--wide-left {
+  @media (min-width: $px600) {
+    > .gi {
+      float: left;
+      width: 50%;
+      &:nth-of-type(odd) {
+        clear: left;
+      }
+    }
+    &.with-dividers {
+      > .gi {
+        &:nth-of-type(odd) {
+          padding-right: $pad;
+        }
+        &:nth-of-type(even) {
+          padding-left: $pad;
+          border-left: $border-style;
+        }
+      }
+    }
+    &.g--with-pad {
+      > .gi {
+        &:nth-of-type(odd) {
+          padding-right: $pad-half;
+        }
+        &:nth-of-type(even) {
+          padding-left: $pad-half;
+        }
+      }
+    }
+  }
+  @media (min-width: $px750) {
+    > .gi:last-child {
+      width: 32.55%;
+    }
+    > .gi:first-child {
+      width: 67%;
+    }
+    .touchevents & {
+      > .gi:last-child {
+        width: 32%;
+      }
+    }
+  }
+}
+
+/**
+ * Grid 3up -- with wider right side
+ */
+.g-3up--wide-right {
+  @media (min-width: $px600) {
+    > .gi {
+      float: left;
+      width: 50%;
+      &:last-child {
+        clear: left;
+        width: 100%;
+      }
+    }
+    &.with-dividers {
+      margin-left: -$pad;
+      margin-right: -$pad;
+      > .gi {
+        &:nth-of-type(even) {
+          border-left: $border-style;
+        }
+      }
+    }
+    &.g--with-pad {
+      > .gi {
+        padding-right: $pad;
+        padding-left: $pad;
+      }
+    }
+  }
+  @media (min-width: $px800) {
+    > .gi {
+      width: 25%;
+      padding-right: $pad;
+      &:last-child {
+        width: 50%;
+        clear: none;
+        padding-left: $pad;
+        border-left: $border-style;
+      }
+    }
+  }
+}
+
+/**
  * Grid Half (Always displayed side by side)
  */
 .g-half {
