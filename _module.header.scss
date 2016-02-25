@@ -20,12 +20,12 @@
 }
 .header--inner {
   padding-top: rem(6);
-  padding-bottom: rem(5);
+  padding-bottom: rem(6);
   @include mq($px800) {
     position: static;
     .header:not(.header--compact) & {
-      padding-top: $pad;
-      padding-bottom: $pad;
+      padding-top: rem(18);
+      padding-bottom: rem(18);
     }
   }
 }
@@ -35,16 +35,16 @@
 }
 
 .logo-link {
-  width: rem(100);
-  height: rem(19);
+  width: rem(92);
+  height: rem(22);
   display: inline-block;
   vertical-align: middle;
-  margin: rem(8) rem(8) rem(3) 0;
+  margin: rem(6) rem(8) 0 0;
   .header:not(.header--compact) & {
     @include mq($px800) {
-      width: rem(150);
-      height: rem(29);
-      margin-top: rem(5);
+      width: rem(175);
+      height: rem(42);
+      margin-top: 0;
       margin-right: rem(30);
     }
   }
@@ -63,6 +63,9 @@
   height: rem(46);
   path {
     fill: $black;
+  }
+  #signoutlink path {
+    fill: $blue;
   }
   .header:not(.header--compact) & {
     @include mq($px800) {

@@ -6,6 +6,7 @@
 
 /* sorry, but the !importants have to be there to override the native stats styles */
 $tdPadding: rem(6) rem(8);
+$tdPaddingSm: rem(6) rem(5);
 
 table.shsTable,
 table.shsTable table,
@@ -35,6 +36,10 @@ div#shsMiniBody {
     background: $gray-light !important;
     font-family: inherit;
     color: $body-color;
+  }
+
+  .bg--slate-dark-2 #shsMiniBody .shsTableTtlRow td {
+    background-color: $slate-dark !important;
   }
 
   table .shsTableTtlRow,
@@ -100,6 +105,64 @@ table.shsLinescore tr.shsGameHomeRuns td {
 
 td#shsTeamScoreboardsEntry {
   padding: 0;
+}
+
+/*overrides for dark slate*/
+
+.bg--slate-dark-2 div#shsBody,
+.bg--slate-dark-2 div#shsMiniBody {
+  table .shsTableTtlRow,
+  table .shsColTtlRow,
+  table .shsRow0Row,
+  table .shsRow1Row,
+  table .shsRow2Row,
+  table .shsRow3Row,
+  table .shsRow4Row,
+  table .shsRow5Row,
+  table .shsRow6Row,
+  table .shsRow7Row,
+  table .shsRow8Row,
+  table .shsRow9Row { 
+
+    td {
+      padding: $tdPaddingSm;
+    }
+  }
+}
+
+.bg--slate-dark-2 div#shsBody,
+.bg--slate-dark-2 div#shsMiniBody {
+   table td {
+    font-size: rem(11);
+
+    @include mq($px800) {
+      font-size: rem(12);
+
+      span {
+        font-size: rem(12);
+      }
+    }
+  }
+}
+
+.bg--slate-dark-2 div#shsBody table .shsTableSubttlRow td,.bg--slate-dark-2 div#shsBody table .shsTableTtlRow td,.bg--slate-dark-2 div#shsBody table .shsColTtlRow td,.bg--slate-dark-2 div#shsMiniBody table .shsTableSubttlRow td,.bg--slate-dark-2 div#shsMiniBody table .shsTableTtlRow td,.bg--slate-dark-2 div#shsMiniBody table .shsColTtlRow td {
+  background-color:$slate-dark-2 !important;
+  color: #fff !important;
+}
+.bg--slate-dark-2 .shsRow0Row,.bg--slate-dark-2 .shsRow1Row {
+  background-color:$slate-dark-2 !important;
+  color: #fff !important;
+}
+.bg--slate-dark-2 div#shsBody a,.bg--slate-dark-2 div#shsMiniBody a {
+  color: #fff !important;
+}
+.bg--slate-dark-2 div#shsBody table .shsTableTtlRow,.bg--slate-dark-2 div#shsBody table .shsColTtlRow,.bg--slate-dark-2 div#shsBody table .shsRow0Row,.bg--slate-dark-2 div#shsBody table .shsRow1Row,.bg--slate-dark-2 div#shsBody table .shsRow2Row,.bg--slate-dark-2 div#shsBody table .shsRow3Row,.bg--slate-dark-2 div#shsBody table .shsRow4Row,.bg--slate-dark-2 div#shsBody table .shsRow5Row,.bg--slate-dark-2 div#shsBody table .shsRow6Row,.bg--slate-dark-2 div#shsBody table .shsRow7Row,.bg--slate-dark-2 div#shsBody table .shsRow8Row,.bg--slate-dark-2 div#shsBody table .shsRow9Row,.bg--slate-dark-2 div#shsMiniBody table .shsTableTtlRow,.bg--slate-dark-2 div#shsMiniBody table .shsColTtlRow,.bg--slate-dark-2 div#shsMiniBody table .shsRow0Row,.bg--slate-dark-2 div#shsMiniBody table .shsRow1Row,.bg--slate-dark-2 div#shsMiniBody table .shsRow2Row,.bg--slate-dark-2 div#shsMiniBody table .shsRow3Row,.bg--slate-dark-2 div#shsMiniBody table .shsRow4Row,.bg--slate-dark-2 div#shsMiniBody table .shsRow5Row,.bg--slate-dark-2 div#shsMiniBody table .shsRow6Row,.bg--slate-dark-2 div#shsMiniBody table .shsRow7Row,.bg--slate-dark-2 div#shsMiniBody table .shsRow8Row,.bg--slate-dark-2 div#shsMiniBody table .shsRow9Row {
+  background-color:$slate-dark-2 !important;
+  color: #fff !important; 
+}
+.bg--slate-dark-2 .shsRow1Row td {
+  background-color:$slate-dark-2 !important;
+  color: #fff !important; 
 }
 
 

@@ -386,7 +386,7 @@ div[style*="visibility: hidden; display: block;"]:empty {
   margin-top: rem(-55);
   margin-bottom: $space;
   position: relative;
-  z-index: 10;
+  z-index: 11;
   .article__content-is-active & {
     display: none;
   }

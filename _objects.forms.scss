@@ -11,7 +11,13 @@
     margin-left: rem(22);
   }
 }
-
+#toggleSigninDivNewsletter input {
+  margin: 0;
+}
+.sign-up-now {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
 .nl__submit {
   position: absolute;
   right: -2px;
@@ -23,7 +29,6 @@
 .nl__options {
   margin-left: rem(14);
 }
-
 /**
  * Search
  */

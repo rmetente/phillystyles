@@ -175,7 +175,7 @@ $header-icon-container-width-wide: 220;
 }
 .touchevents {
   .pn__list {
-    overflow-x: scroll;
+    overflow-x: hidden;
     overflow-y: hidden;
   }
 }
