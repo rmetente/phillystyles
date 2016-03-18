@@ -40,6 +40,9 @@
   display: inline-block;
   vertical-align: middle;
   margin: rem(6) rem(8) 0 0;
+  .logo {
+    height:100%;
+  }
   .header:not(.header--compact) & {
     @include mq($px800) {
       width: rem(175);

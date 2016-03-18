@@ -85,10 +85,29 @@ figcaption,
   a[href^="javascript:"]:after {
     content: "";
   }
+
+  a, a:visited { text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }
+
   pre,
   blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
+  }
+  #article-sidebar .block__img,  #article-sidebar .block__text {
+    overflow:hidden;
+    max-width: 300px;
+    display:block;
+  }
+  #article-sidebar .block__img a,  #article-sidebar .block__text a {
+    font-size:12px;
+  }
+  .max-grad {
+    height:100% !important;
+    overflow:visible !important;
+    max-height:100% !important;
   }
   /*
    * Printing Tables:
@@ -113,8 +132,29 @@ figcaption,
   .no-print,
   #header,
   #footer,
-  .ad {
-    display: none;
+  .ad,
+  #welcome,
+  .article-recirc,
+  .footer--top,
+  .footer--btm .g-max4,
+  .social-share,
+  .ad__leaderboard,
+  .outbrain,
+  .OUTBRAIN,
+  #div-gpt-ad-mrec-5,
+  #div-gpt-ad-leader-1,
+  #div-gpt-ad-slider-1,
+  #div-gpt-ad-leader-2,
+  #div-gpt-ad-leader-3,
+  #div-gpt-ad-leader_btf-16,
+  #div-gpt-ad-rail-11,
+  #div-gpt-ad-rail-12,
+  #noteComments,
+  #loadComments,
+  .article__load,
+  [data-section-toggled="tog-popular"],
+   {
+    display: none !important;
   }
 }
 

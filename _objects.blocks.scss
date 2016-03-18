@@ -35,6 +35,9 @@
   display: block;
   width: 100%;
 }
+.block__link h3:hover, .block__link h3:focus {
+  color: $slate;
+}
 .block__desc {
   font-family: $serif;
   .fonts-loaded & {
@@ -203,6 +206,9 @@
 .block__list-item {
   font-size: rem(16);
   overflow: hidden;
+  p a {
+    color: $black;
+  }
   //min-height: rem(80);
   @include mq($px600) {
     margin-bottom: $space;
@@ -510,6 +516,11 @@
       width: 65%;
     }
   }
+}
+.block__dek > p a {
+  transition: none !important;
+  box-shadow: none !important;
+  color: $black !important;
 }
 .block__feature-headline {
   font-size: rem(22);

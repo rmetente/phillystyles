@@ -14,6 +14,9 @@
 .gray--med {
   color: $gray-med-2;
 }
+.gray--med-2 {
+  color: $gray-med-3;
+}
 .gray--light {
   color: $gray-light-2;
 }
@@ -27,6 +30,9 @@ a.gray--light:hover {
 .black,
 .black a {
   color: $black;
+}
+.black a:hover, .black a:focus, .gray--dark:hover a, .gray--dark:focus a {
+  color: $slate;
 }
 .black--trans {
   color: rgba($black, .7);;
