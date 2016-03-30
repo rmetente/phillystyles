@@ -5,7 +5,7 @@
 $logo-push-small: 112;
 $logo-push-wide: 180;
 $header-icon-container-width-small: 130;
-$header-icon-container-width-wide: 220;
+$header-icon-container-width-wide: 240;
 /**
  * Primary Nav
  */
@@ -15,7 +15,7 @@ $header-icon-container-width-wide: 220;
   top: 0;
   display: none;
   width: 100%;
-  @include mq($px500) {
+  @include mq($px550) {
     display: block;
   }
   .header:not(.header--compact) & {
@@ -26,9 +26,11 @@ $header-icon-container-width-wide: 220;
   }
 }
 .primary-nav__wrap {
-  height: rem(34);
+  background-color: $white;
+  padding-left: rem(10);
+  height: rem(47);
   @include mq($px800) {
-    height: rem(40);
+    height: rem(78);
   }
 }
 .primary-nav--full ul.headlineonly .b_sq {
@@ -56,7 +58,7 @@ $header-icon-container-width-wide: 220;
  */
 .primary-nav--full {
   opacity: 1;
-  bottom: rem(-2);
+  bottom: rem(2);
   ul {
       overflow: hidden;
       white-space: nowrap;
@@ -95,7 +97,7 @@ $header-icon-container-width-wide: 220;
 .primary-nav--recirc {
   .pn__list-item {
     width: 100%;
-    height: rem(40);
+    height: rem(32);
   }
 }
 .pn__channel {

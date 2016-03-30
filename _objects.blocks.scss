@@ -349,11 +349,28 @@
         clear: left;
       }
     }
-  }
+  }   
   [class^="shift-left"] & {
     @media (min-width: $px900) and (max-width: $px1100) {
       width: 50%;
     }
+  }
+  .g-flex--2 & {
+    @media (min-width: $px900) and (max-width: $px1100) {
+      width: 100%;
+    }
+    @include mq($px500) {
+      width: 100%;
+    }
+    @include mq($px650) {
+      width: 50%;
+    }
+    @include mq($px760) {
+      width: 100%;
+    }
+    @include mq($px1000) {
+      width: 50%;
+    } 
   }
   .g-flex--4 &,
   .g-flex--4:not(.g-stop) & {
@@ -804,6 +821,65 @@
       width: 100%;
       display: block;
     }
+  }
+}
+
+.g-flex--2 {
+  .stack-img-text--600-700__900-1100 {
+    .block__img {
+      display: block;
+      width: 50%;
+      float: right;
+      margin-bottom: 0;
+      padding: 0 ;
+      padding-left: $pad-and-half;
+      line-height: 0;
+    }
+    .block__text {
+      padding: $pad-half 0 0;
+      float: none;
+      width: 50%;
+      display: block;
+    }
+    @include mq($px500) {
+      .block__img {
+        width: 50%;
+        padding-left: $pad;
+      }
+      .block__text {
+        width: 50%;
+      }
+    }
+    @include mq($px650) {
+      .block__img {
+        width: 100%;
+        padding-left: 0;
+        padding-bottom: $pad-half;
+      }
+      .block__text {
+        width: 100%;
+      }
+    }
+    @include mq($px760) {
+      .block__img {
+        width: 35%;
+        float: right;
+      }
+      .block__text {
+        float: none;
+        width: 60%;
+      }
+    }  
+    @include mq($px1000) {
+      .block__img {
+        width: 100%;
+        padding-bottom: rem(10);
+      }
+      .block__text {
+        float: none;
+        width: 100%;
+      }
+    }            
   }
 }
 

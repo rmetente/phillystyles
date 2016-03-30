@@ -4,7 +4,7 @@
 
 .header {
   height: rem($small-header-height);
-  background-color: $white;
+  background-color: $gray-dark;
   padding-top: rem(4);
   position: fixed;
   width: 100%;
@@ -21,12 +21,23 @@
 .header--inner {
   padding-top: rem(6);
   padding-bottom: rem(6);
+  background-color: $gray-dark;
+  padding-top: 0;
+  padding-bottom: 0;   
   @include mq($px800) {
     position: static;
     .header:not(.header--compact) & {
-      padding-top: rem(18);
-      padding-bottom: rem(18);
+      padding-top: 0;
+      padding-bottom: 0;      
     }
+  }
+}
+.header--logo, .primary-nav {
+  padding-top: rem(9);
+  padding-bottom: rem(9);
+  @include mq($px800) {
+    padding-top: rem(18);
+    padding-bottom: rem(18);
   }
 }
 
@@ -35,11 +46,11 @@
 }
 
 .logo-link {
-  width: rem(92);
+  width: rem(90);
   height: rem(22);
   display: inline-block;
   vertical-align: middle;
-  margin: rem(6) rem(8) 0 0;
+  margin: rem(2) rem(14) 0 0;
   .logo {
     height:100%;
   }
@@ -48,9 +59,28 @@
       width: rem(175);
       height: rem(42);
       margin-top: 0;
-      margin-right: rem(30);
+      margin-right: rem(20);
     }
   }
+}
+.papers-logo {
+  float:left;
+  background-color:$white;
+  padding:rem(10) rem(8);
+  border-right:1px solid #ccc; 
+    @include mq($px800) {
+    padding:rem(18) rem(14);
+  }
+}
+.papers-logo img {
+  width: rem(70);
+  height: rem(26);
+  .header:not(.header--compact) & {
+    @include mq($px800) {
+      width: rem(110);
+      height: rem(42);
+    }
+  } 
 }
 
 /**
@@ -62,7 +92,7 @@
   right: 0;
   background: $white;
   padding-left: rem(8);
-  box-shadow: rem(1) 0 rem(50) rem(21) $white;
+  box-shadow: rem(1) 0 rem(16) rem(16) $white;
   height: rem(46);
   path {
     fill: $black;
@@ -73,6 +103,7 @@
   .header:not(.header--compact) & {
     @include mq($px800) {
       height: 100%;
+      box-shadow: rem(1) 0 rem(50) rem(21) $white;
     }
   }
   // Menu is active
@@ -89,7 +120,11 @@
   height: rem(46);
   position: relative;
 }
-
+.header--right-side {
+  /*box-shadow: 13.063rem 1rem 0.125rem 50rem #fff;*/
+  box-shadow: 0 0 0 rem(800) $white;
+  float:right;
+}
 /**
  * Menu/Nav Toggling Action
  */
@@ -191,8 +226,17 @@ $menu-toggler-width: 25;
     }
   }
 }
-
-
+.search-toggler, .divider, #signinlink { 
+ .header:not(.header--compact) & {
+    display: none;
+    @include mq($px325) {
+      display: inline-block;
+    }
+  }
+}
+ .menu-is-active #signinlink {
+       display: inline-block !important;
+ }
 /*------------------------------------*\
     $PROGRESS INDICATOR
 \*------------------------------------*/

@@ -461,6 +461,88 @@
     width: 65%;
   }
 }
+.reboot-entry .sec-news__primary--var1 {
+      width: 100%;
+      padding: rem(16) 0;
+    @include mq($px500) {
+      float: left;
+      width: 50%;
+    }
+    @include mq($px650) {
+      float: left;
+      width: 60%;
+    }
+    @include mq($px760) {
+      float: left;
+      width: 50%;
+    }
+    @include mq($px900) {
+      width: 50%;
+    }    
+    @include mq($px1000) {
+      width: 67%;
+      padding-right: $pad-half;
+    }
+}
+.reboot-entry .sec-news__secondary--var1 {
+      .block__title {
+        font-size: rem(11);
+      }
+      .block__list-item a {
+        padding-bottom: $pad-half;
+        padding-top: $pad-half;
+      }
+      .block__list-item {
+        margin-bottom: 0;
+      }      
+      width: 100%;
+      padding: rem(16) 0;
+    @include mq($px500) {
+      float:right;
+      width: 50%;
+      padding-left: $pad-and-half;
+    }
+    @include mq($px650) {
+      float: right;
+      width: 40%;
+      padding: 0 $pad-and-half;
+    }
+    @include mq($px760) {
+      float: right;
+      width: 50%;
+      .block__list-item {
+        margin-bottom: $space-half;
+      }       
+    }
+    @include mq($px900) {
+      float: right;
+      width: 50%;
+      .block__list-item a {
+        padding-bottom: rem(12);
+        padding-top: rem(12);
+      }      
+    }
+    @include mq($px1000) {
+      .block__list-item{
+        margin-bottom: rem(2); 
+      }
+      .li__title {
+        font-size: rem(13);
+      }
+    } 
+    @include mq($px1150) {
+      .block__list-item {
+        margin-bottom: $space-half; 
+      }
+      .li__title {
+        font-size: rem(16);
+      }
+    }
+    @include mq($px1000) {
+      width: 32%;
+      padding: rem(16);
+    }
+}
 .sec-news__secondary {
   .block__list-item {
     border-bottom: $border-style;
@@ -474,7 +556,7 @@
     .block__img {
       @media (max-width: $px600) {
         max-width: 150px;
-      }
+      }   
     }
     &:last-child {
       @include mq($px650) {
@@ -496,7 +578,6 @@
 .section__top-ads {
   margin-bottom: $space-double;
 }
-
 .sec-news__secondary--reduced-height {
   margin-bottom: $space;
   @media (min-width: $px600) and (max-width: $px1100) {
@@ -520,6 +601,9 @@
     @media (min-width: $px350) and (max-width: $px600) {
       &:nth-last-child(2),
       &:last-child {
+        .block__img {
+          display: none;
+        }      
         width: 50%;
         float: left;
         padding-top: $pad-half;
