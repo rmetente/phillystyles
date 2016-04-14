@@ -390,6 +390,101 @@
 /**
  * Featured Block in Block List
  */
+.comcast-module {
+     .block__list-items-feature li:not(:first-child) .block__img {
+      @media (max-width: $px600) {
+        display: none;
+      }
+    }
+    .block__list-items-feature {
+      @media (min-width: $px600) {
+        padding-left: calc(33.3333% + 15px);
+      }
+    }
+    .block__list-item-in-feature {
+      @media (min-width: $px600) {
+        width: 50%;
+      }
+    }
+    .block__list-item-in-feature {
+      @media (min-width: $px800) {
+        width: 50%;
+      }
+    }
+   .block__list-items-feature .block__list-item-featured {
+    @media (min-width: $px600) {
+      /*
+      margin-bottom: $space-and-half;
+      width: 100%;
+      */
+      position: absolute;
+      width: 33.3333%;
+      margin: 0;
+      left: 0;
+      display: block;
+      height: calc(100% - 20px);
+      padding: 0 rem(15) 0 0;
+      border-right: $border-style;
+
+    }
+    @media (min-width: $px800) {
+      position: absolute;
+      width: 33.3333%;
+      margin: 0;
+      left: 0;
+      display: block;
+      height: calc(100% - 20px);
+      padding: 0 rem(15) 0 0;
+      border-right: $border-style;
+    }
+    .block__img {
+      float: left;
+      width: 40%;
+      padding-left: 0;     
+      @media (min-width: $px600) {
+        display: block;
+        margin-bottom: $space-half;
+        width: 100%;
+        max-width: none;
+        padding: 0;
+        float: none;
+        text-align: left;
+      }
+    }
+    .block__text {
+      float: left;
+      width: 60%;
+      padding-left: $pad;
+      @media (min-width: $px600) {
+        width: 100%;
+        padding: 0;
+        display: block;
+        float: none;
+      }
+    }
+    .li__title {
+      display: inline-block;
+      margin-bottom: rem(5);
+      font-size: rem(18);
+      @media (min-width: $px400) {
+        font-size: rem(21);
+      }
+      @media (min-width: $px500) {
+        font-size: rem(26);
+      }
+    }
+    div[class^="shift-left"] & {
+      @media (min-width: $px900) {
+        width: 100%;
+      }
+    }
+    .g-flex--4 & {
+      @media (min-width: $px1100) {
+        width: 50%;
+      }
+    }
+  }
+}
 .block__list-items-feature {
   @media (min-width: $px800) and (max-width: $px900), (min-width: $px1100) {
     padding-left: calc(33.3333% + 15px);

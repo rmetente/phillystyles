@@ -100,7 +100,7 @@
   right: rem(25);
 }
 .slide__text {
-  padding: rem(15);
+  padding: rem(12) rem(15) rem(15) rem(15);
   color: $white;
   background-color: rgba($black, .8);
   position: absolute;
@@ -141,7 +141,8 @@
   }
 }
 .slide__caption {
-  padding-top: rem(6);
+  padding-top: rem(12);
+  padding-bottom: rem(12);
   display: inline-block;
 }
 .slide__credit {
@@ -385,6 +386,7 @@
     img {
       max-height: 100vh;
       height: auto;
+      width: auto;
     }
     &:before {
       display: none;
@@ -396,7 +398,7 @@
   .slide__text {
     width: 100vw;
     bottom: 0;
-    padding-bottom: rem(56);
+    padding-bottom: rem(66);
     @include mq($px700) {
       padding-bottom: rem(15);
       padding-right: rem(220);
@@ -431,14 +433,14 @@
     }
   }
   .gs__list {
-    padding: rem(3) rem(12);
+    padding: rem(10) rem(12);
     position: absolute;
     bottom: rem(4);
     margin-left: rem(-2);
     @include mq($px700) {
       right: 0;
       text-align: right;
-      width: rem(202);
+      width: rem(252);
       margin-left: 0;
     }
   }
@@ -471,3 +473,8 @@
     padding: .75rem .5rem .5rem;
   }
 }
+.owlShareTools {
+  height:1px;
+  display:none;
+}
+

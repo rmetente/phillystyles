@@ -6,6 +6,10 @@
   background-color: $white;
 }
 
+#contentinside {
+	background-color: $white;
+}
+
 .content {
   padding-top: rem($small-header-height);
   @include mq($px800) {

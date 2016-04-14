@@ -165,10 +165,25 @@
     }
   }
 }
+.icon__buybutton {
+  background-color: $buybutton-blue;
+  border: rem(3) solid $buybutton-blue;
+  path {
+    fill: $white;
+  }
+  &:hover {
+    background-color: $white;
+    border-color: $buybutton-blue;
+    path {
+      fill: $buybutton-blue
+    }
+  }
+}
 .icon__facebook,
 .icon__twitter,
 .icon__instagram,
-.icon__pinterest {
+.icon__pinterest,
+.icon__buybutton {
   &.icon--s:hover {
     border-width: rem(2);
   }
