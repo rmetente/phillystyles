@@ -158,11 +158,13 @@
 .f-sub__inquirer-logo {
   svg {
     width: rem(140);
+    max-height: rem(50);
   }
 }
 .f-sub__dailynews-logo {
   svg {
     width: rem(120);
+    max-height: rem(50);
   }
 }
 .f-sub__paper {

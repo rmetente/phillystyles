@@ -117,6 +117,12 @@
     height: 1050px;
   }
 }
+.track--1600 {
+  @include mq($px1200) {
+    // Push through the content at 1200px to make way for the sticky ad.
+    height: 1600px;
+  }
+}
 .track--1600--900 {
   @include mq($px900) {
     // Push through the content at 900px to make way for the sticky ad.
@@ -137,11 +143,20 @@
     $OUTBRAIN 3RD PARTY
 \*------------------------------------*/
 
-.OUTBRAIN .AR_1 {
-  font-family: $font-secondary;
+.OUTBRAIN .AR_7.ob-strip-layout {
+  font-family: $font;
   .obpd_header {
     display: block;
     margin-bottom: rem(5);
+  }
+ .ob-widget-header {
+    border-top: none;
+    border-bottom: 1px solid $gray-light-6;
+    background-color: $gray-light-4;
+    color: $gray-med-4;
+    padding: $pad-half $pad;
+    font-size: rem(15);
+    letter-spacing: rem(1);
   }
   .ob-text-content {
     font-size: rem(15);

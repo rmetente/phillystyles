@@ -165,6 +165,22 @@
     }
   }
 }
+.icon__reprint {
+  background-color: $gray;
+  path {
+    fill: $white;
+  }
+  &:hover {
+    background-color: $buybutton-blue;
+    border-color: $buybutton-blue;
+    path {
+      fill: $white;
+    }
+  }
+  &:hover > .label {
+    color: $buybutton-blue;
+  }
+}
 .icon__buybutton {
   background-color: $buybutton-blue;
   border: rem(3) solid $buybutton-blue;

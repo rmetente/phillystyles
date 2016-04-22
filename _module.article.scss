@@ -235,7 +235,33 @@ div[style*="visibility: hidden; display: block;"]:empty {
   padding: 0 rem(3);
   z-index: 10;
 }
+.reprints .label {
+  position:relative;
+  top: rem(-25);
+  padding-left: rem(38);
+  color: $gray;
+  font-size: 8px;
+  font-weight:600;
+  width: rem(40);
+  @include mq($px800) {
+    display: block;
+    padding-top: rem(10);
+    padding-left: 0;
+    top: 0;
+    left: rem(-10);
+  }
+}
+.reprints a {
+  overflow: visible;
+  position:relative;
+}
 
+.reprints {
+  height: auto;
+  @include mq($px800) {
+    height: rem(60);
+  }
+}
 /**
  * Image Social Tools
  */
@@ -560,6 +586,32 @@ div[style*="visibility: hidden; display: block;"]:empty {
   }
 
 }
+.tag-popular {
+  background-color: $white;
+  border-bottom: none;
+  padding-top: $pad;
+  padding-bottom: $pad-half;
+
+  h2.block__title {
+    color: $gray-med-4;
+    font-weight: 400;
+    background-color: $gray-light-4;
+    border-bottom: $border-style-gray;
+    padding: $pad;
+  }
+  
+  h2.block__title b {
+    font-weight: 400;
+  }
+  .block__list-items {
+    padding-bottom: $pad;
+  }
+  li.block__list-item {
+    padding-left: $pad;
+    padding-right: $pad;
+  }
+}
+
 
 /*------------------------------------*\
     $SLIDE UP FIGURE CAPTION
