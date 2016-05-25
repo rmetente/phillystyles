@@ -12,6 +12,32 @@
   }
 }
 
+.ad > div:last-of-type:after {
+    content: "Advertisement";
+    text-align: center;
+    font-size: rem(10);
+    font-family: $sans-2;
+    color: $gray-light-7;
+    padding-top: rem(5);
+    display: block;
+}
+
+.article__content {
+    .ad:before {
+      content: "Article continues below advertisement";
+      text-align: center;
+      font-size: rem(10);
+      font-family: $sans-2;
+      color: $gray-light-7;
+      padding-bottom: rem(5);
+      display: block; 
+    }
+    .ad > div:last-of-type:after {
+      content: "";
+      padding:0;
+    } 
+}
+
 .ad-class--320x50-728x90 {
   @include mq($px350, max) {
     //margin-left: -10px;

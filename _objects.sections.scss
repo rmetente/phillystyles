@@ -530,7 +530,7 @@
         font-size: rem(13);
       }
     } 
-    @include mq($px1150) {
+    @include mq($px1200) {
       .block__list-item {
         margin-bottom: $space-half; 
       }
@@ -542,6 +542,24 @@
       width: 32%;
       padding: rem(16);
     }
+}
+.sec-sports__secondary--var1 {
+    @include mq($px900) {
+      .block__list-item{
+        margin-bottom: rem(12); 
+      }
+      .li__title {
+        font-size: rem(13);
+      }
+    }  
+    @include mq($px1200) {
+      .block__list-item {
+        margin-bottom: $space; 
+      }
+      .li__title {
+        font-size: rem(16);
+      }
+    }     
 }
 .sec-news__secondary {
   .block__list-item {

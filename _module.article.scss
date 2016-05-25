@@ -308,7 +308,7 @@ div[style*="visibility: hidden; display: block;"]:empty {
   > pre,
   > div,
   > blockquote,
-  > iframe,
+  > iframe, 
   > .fitcenter,
   > table,
   > .size--full,
@@ -321,6 +321,13 @@ div[style*="visibility: hidden; display: block;"]:empty {
       margin-left: rem($col-small-width-second - $col-small-width-first);
     }
   }
+  > iframe.instagram-media, 
+  > blockquote.instagram-media {
+    @include mq($px1200) {
+      margin-left: rem($col-small-width-second - $col-small-width-first) !important;
+    }
+  }
+
   > ul,
   > ol {
     @include mq($px800, max) {

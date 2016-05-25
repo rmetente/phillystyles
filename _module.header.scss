@@ -66,23 +66,102 @@
 .papers-logo {
   float:left;
   background-color:$white;
-  padding:rem(10) rem(8);
-  border-right:1px solid #ccc; 
-    @include mq($px800) {
-    padding:rem(18) rem(14);
-  }
+  border-right:1px solid #ccc;
+  padding: 0; 
 }
-.papers-logo img {
-  width: rem(70);
-  height: rem(26);
-  .header:not(.header--compact) & {
+
+.papers-logo a {
+  display: block;
+}
+
+.papers-logo .inq-logo a {
+   padding:rem(10) rem(8) 0 rem(8);
     @include mq($px800) {
-      width: rem(110);
-      height: rem(42);
-    }
+    padding: rem(17) rem(16) 0 rem(16);
+  }
+  img {
+    width: rem(70);
+    height: rem(15);
+    display: block;
+    .header:not(.header--compact) & {
+      @include mq($px800) {
+        width: rem(106);
+        height: rem(26);
+      }
+    } 
   } 
 }
 
+.papers-logo .dn-logo a {
+   padding:0 rem(8) rem(10) rem(8);
+    @include mq($px800) {
+    padding: 0 rem(16) rem(15) rem(16);
+  }
+  img {
+    width: rem(68);
+    height: rem(12);
+    display: block;
+    padding-left: rem(2);
+    .header:not(.header--compact) & {
+      @include mq($px800) {
+        width: rem(106);
+        height: rem(26);
+        margin-top: rem(-5);
+        padding-left:0;
+      }
+    } 
+  }   
+}
+/*
+.papers-logo img {
+  width: rem(70);
+  height: rem(20);
+  .header:not(.header--compact) & {
+    @include mq($px800) {
+      width: rem(110);
+      height: rem(26);
+    }
+  } 
+}
+*/
+/* Sponsored Content Longform */
+.sponsor-label {
+  display:none;
+}
+.sponsor-label-wrap {
+  display:table;
+  height:100%;
+}
+.sponsor-logo-wrap {
+  display:table;
+  height:100%;
+}
+.sponsor-logo {
+  display: table-cell; 
+  text-align:center; 
+  vertical-align: middle;
+}
+.sponsor-logo img {
+  height:1.875rem;
+}
+.sponsor-logo img {
+  .header:not(.header--compact) & {
+    @include mq($px800) {
+        height: rem(50);
+    }
+  }
+}
+.sponsor-label {
+  .header:not(.header--compact) & {
+    @include mq($px800) {
+      font-size: rem(12);
+      display: table-cell; 
+      text-align:center;
+      color:#333333;
+      vertical-align: middle;
+    }
+  }
+}
 /**
  * Header Icons (Search & Avatar)
  */
