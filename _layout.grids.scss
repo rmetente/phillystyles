@@ -276,7 +276,7 @@
         padding-right: $pad;
       }
       > .gi:nth-child(even) {
-        padding-left: $pad;
+        padding-left: 0;
       }
     }
     > .gi {
@@ -286,12 +286,13 @@
         clear: left;
         width: 100%;
         padding-right: 0;
-      }
+      }    
     }
   }
   @media (min-width: $px900) {
     &.g--with-pad {
       > .gi {
+        padding-left: $pad-and-half;
         padding-right: $pad-and-half;
       }
     }
@@ -301,9 +302,16 @@
       &:nth-of-type(3n+3) {
         padding-right: 0;
       }
+      &.with-dividers {
+        border-left: $border-style;       
+      }       
+      &:nth-of-type(3n+1) {
+        padding-left: 0;
+        border-left: 0;
+      }        
       &:nth-of-type(3n+4) {
         clear: left;
-      }
+      }           
     }
   }
 }

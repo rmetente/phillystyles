@@ -16,6 +16,11 @@ a {
     color: $gray-dark;
   }
 }
+.section-front-header .events {
+  a path {
+    fill: $white;
+  }
+}
 .article-meta .byline a.open-modals {
   cursor: pointer;
 }

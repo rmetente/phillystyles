@@ -561,6 +561,24 @@
       }
     }     
 }
+.ad__wallpaper .sec-sports__secondary--var1 {
+    @include mq($px900) {
+      .block__list-item{
+        margin-bottom: rem(12); 
+      }
+      .li__title {
+        font-size: rem(13);
+      }
+    }  
+    @include mq($px1200) {
+      .block__list-item {
+        margin-bottom: $space; 
+      }
+      .li__title {
+        font-size: rem(13);
+      }
+    } 
+}
 .sec-news__secondary {
   .block__list-item {
     border-bottom: $border-style;
