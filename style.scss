@@ -39,6 +39,7 @@
  * Weather..............Weather styles.
  * Locations............Location items styles.
  * Containers...........Container specific styles.
+ * Events...............Event calendar search results.
  *
  * TEXT
  * Text.................Various text-specific class definitions.
@@ -121,6 +122,7 @@
 @import "objects.weather";
 @import "objects.locations";
 @import "objects.containers";
+@import "objects.events";
 
 
 

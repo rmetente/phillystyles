@@ -44,7 +44,7 @@
  * Grid 2up
  */
 .g-2up {
-  @include mq($px400) {
+  @include mq($px500) {
     > .gi {
       float: left;
       width: 50%;
@@ -70,6 +70,20 @@
         }
         &:nth-of-type(even) {
           padding-left: $pad-half;
+        }
+      }
+    }
+    &.g--with-space {
+      > .gi {
+        width: calc(50% - #{$space});
+        margin-left: $space;
+        &:nth-of-type(odd),
+        &:nth-of-type(even) {
+          margin-right: 0;
+          margin-left: $space;
+        }
+        &:first-child {
+          margin-left: 0;
         }
       }
     }

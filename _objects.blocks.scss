@@ -124,6 +124,57 @@
   }
 }
 
+.block__thumb--horiz--left {
+  font-size: rem(16);
+  overflow: hidden;
+  min-height: rem(80);
+  @include mq($px600) {
+    margin-bottom: $space;
+  }
+  .block__img {
+    text-align: right;
+    width: 50%;
+    float: left;
+    padding-right: $pad-and-half;
+    margin-bottom: 0;
+    @include mq($px500) {
+      width: 100%;
+      padding-right: 0;
+    }
+    @include mq($px800) {
+      width: 45%;
+      float:left;
+      padding-right: $pad-and-half;
+    }
+  }
+  .block__text {
+    width: 50%;
+    float: right;
+    .block__headline {
+      font-size: rem(16);
+      margin-bottom: rem(5);
+    }
+    .digest-headline2 {
+      //font-size: rem(12);
+    }
+    @include mq($px500) {
+      width: 100%;
+      float: none;
+    }
+    @include mq($px800) {
+      width: 55%;
+      float:left;
+      .block__headline {
+        font-size: rem(22);
+        margin-bottom: rem(10);
+      }
+      .digest-headline2 {
+        font-size: rem(16);
+      }      
+    }    
+  }
+}
+
 /**
  * Bump up the size if there's more room.
  */

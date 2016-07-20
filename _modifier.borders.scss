@@ -32,6 +32,12 @@
 .border--btm--slate {
   border-top-color: $slate;
 }
+.border--top--gray-dark {
+  border-top-color: $gray-dark;
+}
+.border--btm--gray-dark {
+  border-top-color: $gray-dark;
+}
 .border--top--red {
   border-top-color: $red;
 }
@@ -44,8 +50,14 @@
 .border--top--s {
   border-top-width: 1px;
 }
+.border--top--sm {
+  border-top-width: 2px;
+}
 .border--btm--s {
   border-bottom-width: 1px;
+}
+.border--btm--sm {
+  border-bottom-width: 2px;
 }
 .border--top--m {
   border-top-width: 3px;

@@ -543,6 +543,17 @@
       padding: rem(16);
     }
 }
+.ad__wallpaper .reboot-entry .sec-news__secondary--var1 {
+    @include mq($px1000) {
+      .block__list-item{
+        margin-bottom: rem(2); 
+      }
+      .li__title {
+        font-size: rem(13);
+      }
+    } 
+  
+}
 .sec-sports__secondary--var1 {
     @include mq($px900) {
       .block__list-item{
