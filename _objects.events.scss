@@ -1,0 +1,14 @@
+/*------------------------------------*\
+    $EVENT DETAILS
+\*------------------------------------*/
+
+#mobileEventSearch .calDisplay {
+	float: none !important;
+	width: auto !important;
+	background-color: transparent !important;
+	margin: 0 !important;
+}
+
+#mobileEventSearch .calDisplay .thisDay, #mobileEventSearch .calDisplay .thisDate {
+	display: inline;
+}

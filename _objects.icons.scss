@@ -140,6 +140,20 @@
     }
   }
 }
+.icon__tumblr {
+  background-color: $tumbler-navy;
+  border: rem(3) solid $tumbler-navy;
+  path {
+    fill: $white;
+  }
+  &:hover {
+    background-color: $white;
+    border-color: $tumbler-navy;
+    path {
+      fill: $tumbler-navy;
+    }
+  }
+}
 .icon__instagram {
   background-color: $instagram-brown;
   border: rem(3) solid $instagram-brown;
