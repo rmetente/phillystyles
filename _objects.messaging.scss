@@ -11,8 +11,9 @@
   border-bottom-style: solid;
   border-bottom-width: 4px;
   border-bottom-color: $red;
-  background-color: $slate-light-2;
+  background-color: $slate-light;
   min-height: rem($small-header-height + 2px);
+  z-index: 1;
   @include mq($px800) {
     height: rem($wide-header-height + 2px);
   }

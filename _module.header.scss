@@ -176,7 +176,7 @@
   path {
     fill: $black;
   }
-  #signoutlink path {
+  #signoutlink path, #myprofilelink path {
     fill: $blue;
   }
   .header:not(.header--compact) & {
