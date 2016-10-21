@@ -29,6 +29,7 @@ $gray-light-4: #f3f3f3;
 $gray-light-5: #c2c2c2;
 $gray-light-6: #d7d7d7;
 $gray-light-7: #999;
+$gray-light-7: #bbb;
 $gray-very-light: #fafafa;
 $gray-med: #a7a7a7;
 $gray-med-2: #666;
@@ -36,9 +37,10 @@ $gray-med-3: #bdbdbd;
 $gray-med-4: #333333;
 $gray-dark: #222222;
 $gray-dark-2: #252525;
+$gray-dark-3: #202020;
 $white: #fff;
 $black: #000;
-$blue-bright:#0863a0;
+$blue-bright: #0863a0;
 $dim: rgba(0,0,0,0.5);
 $error: #f00;
 $valid: #089e00;
@@ -136,7 +138,7 @@ $border-style-slate: 1px solid $slate;
 $border-style-gray: 1px solid $gray-med-3;
 $border-style-white: 1px solid $white;
 $border-style-dark: 1px solid $black;
-
+$border-style-red: 2px solid $red-2;
 /**
  * Breakpoints (legacy)
  */

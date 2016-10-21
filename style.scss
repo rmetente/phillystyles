@@ -49,6 +49,7 @@
  * Footer...............The main page footer.
  * Header...............The main page header.
  * Main.................Content area styles.
+ * Homepage.............Non global homepage overrides.
  *
  * THIRD PARTY
  * Stats................Style overrides for the stats widget .
@@ -139,6 +140,7 @@
 @import "module.footer";
 @import "module.header";
 @import "module.main";
+@import "module.homepage";
 
 
 /*------------------------------------*\
@@ -147,6 +149,7 @@
 @import "vendor.stats";
 @import "vendor.carousel";
 @import "vendor.popup";
+@import "vendor.travelzoo";
 
 
 /*------------------------------------*\
